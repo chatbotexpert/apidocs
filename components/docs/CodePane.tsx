@@ -152,7 +152,7 @@ export function CodePane({ endpoint }: { endpoint: Endpoint }) {
                     language={langMap[lang]}
                     style={dark ? vscDarkPlus : vs}
                     customStyle={{
-                        backgroundColor: "transparent",
+                        background: "transparent",
                         fontSize: "0.82rem",
                         lineHeight: 1.6,
                         margin: 0,
@@ -178,7 +178,7 @@ export function CodePane({ endpoint }: { endpoint: Endpoint }) {
                     language="json"
                     style={dark ? vscDarkPlus : vs}
                     customStyle={{
-                        backgroundColor: "transparent",
+                        background: "transparent",
                         borderBottomLeftRadius: "12px",
                         borderBottomRightRadius: "12px",
                         fontSize: "0.75rem",
