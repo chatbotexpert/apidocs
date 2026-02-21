@@ -13,6 +13,7 @@ export async function GET(
             include: {
                 platform: true,
                 parameters: { include: { guide: true } },
+                guide: true,
             },
         });
         if (!endpoint) return NextResponse.json({ error: "Endpoint not found" }, { status: 404 });

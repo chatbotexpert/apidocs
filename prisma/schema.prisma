@@ -30,6 +30,7 @@ model Endpoint {
   summary     String
   description String?
   category    String?
+  guide       EndpointGuide?
   parameters  Parameter[]
   createdAt   DateTime    @default(now())
   updatedAt   DateTime    @updatedAt
@@ -53,6 +54,14 @@ model ParameterGuide {
   id          Int       @id @default(autoincrement())
   parameter   Parameter @relation(fields: [parameterId], references: [id], onDelete: Cascade)
   parameterId Int       @unique
+  markdown    String
+  updatedAt   DateTime  @updatedAt
+}
+
+model EndpointGuide {
+  id          Int       @id @default(autoincrement())
+  endpoint    Endpoint  @relation(fields: [endpointId], references: [id], onDelete: Cascade)
+  endpointId  Int       @unique
   markdown    String
   updatedAt   DateTime  @updatedAt
 }

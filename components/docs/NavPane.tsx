@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { ChevronDown, ChevronRight, Search } from "lucide-react";
+import { ChevronDown, ChevronRight, Search, Sparkles } from "lucide-react";
 import { MethodBadge } from "@/components/MethodBadge";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { SearchModal } from "@/components/SearchModal";
@@ -67,6 +67,18 @@ export function NavPane({ activeId }: NavPaneProps) {
                     <ThemeToggle />
                 </div>
                 <div style={{ padding: "0.5rem 0.75rem 0" }}>
+                    <Link href="/docs/chat" style={{
+                        display: "flex", alignItems: "center", gap: "0.5rem",
+                        padding: "0.5rem 0.75rem", borderRadius: "6px",
+                        background: "color-mix(in srgb, var(--accent) 10%, transparent)",
+                        color: "var(--accent)", textDecoration: "none",
+                        fontWeight: 500, fontSize: "0.85rem", marginBottom: "0.5rem",
+                        border: "1px solid color-mix(in srgb, var(--accent) 20%, transparent)",
+                        transition: "all 0.2s ease"
+                    }} className="search-trigger">
+                        <Sparkles size={14} />
+                        <span>HashTurn AI Assistant</span>
+                    </Link>
                     <button className="search-trigger" onClick={() => setShowSearch(true)}>
                         <Search size={13} />
                         <span>Search endpoints...</span>
@@ -94,10 +106,26 @@ export function NavPane({ activeId }: NavPaneProps) {
                                             const catEndpoints = platformEndpoints.filter(
                                                 (e) => (e.category ?? "General") === cat
                                             );
+                                            const catKey = `${platform.id}-${cat}`;
+                                            const isCatCollapsed = collapsed[catKey];
+
+                                            // Toggle just the category string
+                                            const toggleCategory = (e: React.MouseEvent) => {
+                                                e.stopPropagation();
+                                                setCollapsed((c) => ({ ...c, [catKey]: !c[catKey] }));
+                                            };
+
                                             return (
                                                 <div key={cat} className="category-group">
-                                                    <div className="category-label">{cat}</div>
-                                                    {catEndpoints.map((ep) => (
+                                                    <div
+                                                        className="category-label"
+                                                        onClick={toggleCategory}
+                                                        style={{ cursor: "pointer", display: "flex", justifyContent: "space-between", alignItems: "center" }}
+                                                    >
+                                                        <span>{cat}</span>
+                                                        {isCatCollapsed ? <ChevronRight size={11} /> : <ChevronDown size={11} />}
+                                                    </div>
+                                                    {!isCatCollapsed && catEndpoints.map((ep) => (
                                                         <Link
                                                             key={ep.id}
                                                             href={`/docs/${ep.id}`}

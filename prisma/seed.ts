@@ -122,16 +122,109 @@ async function main() {
     // ════════════════════════════════════════════
     const loanGet = await upsertEndpoint(encompass.id, "/encompass/v3/loans/{loanId}", "GET", "Get Loan Details",
         "Retrieves the complete loan object for a given Loan GUID. Returns all loan fields including borrower, property, and financial data.", "Loans");
+
+    await upsertEndpointGuide(loanGet.id, `
+# Reading Loans in Encompass API
+The \`GET /encompass/v3/loans/{loanId}\` endpoint is the workhorse of the Encompass API. It pulls a massive JSON object representing everything from the borrower's name to the rate lock status.
+
+## Common Use Cases
+*   **Syncing to a CRM:** Polling for loan updates and mapping standard fields (e.g. \`4000\` - Borrower First Name) into Salesforce or HubSpot.
+*   **Generating Disclosures:** Extracting rate and fee data to populate custom PDF documents.
+*   **Underwriting Assistants:** Feeding loan data into an AI model for preliminary review.
+
+## Managing the Payload Size
+A full Encompass loan can be **huge** (sometimes exceeding 10MB of JSON). 
+> [!TIP]
+> Use the \`entities\` parameter to significantly speed up your requests! Instead of downloading the whole loan, you can ask for just the custom fields, or just the contacts.
+
+### Entities Example
+\`\`\`bash
+curl -X GET "https://api.elliemae.com/encompass/v3/loans/{loanId}?entities=contacts,customFields" \\
+  -H "Authorization: Bearer YOUR_TOKEN"
+\`\`\`
+`);
+
     const loanPatch = await upsertEndpoint(encompass.id, "/encompass/v3/loans/{loanId}", "PATCH", "Update Loan Fields",
         "Partially updates a loan's field values. Only the fields provided in the request body will be modified.", "Loans");
     const loanCreate = await upsertEndpoint(encompass.id, "/encompass/v3/loans", "POST", "Create New Loan",
         "Creates a new loan in Encompass. Returns the newly created loan's GUID.", "Loans");
+
+    await upsertEndpointGuide(loanCreate.id, `
+# Creating Loans in Encompass
+Creating a loan via the v3 API is generally straightforward, but requires understanding how Encompass structures its data model.
+
+## Essential Fields
+While technically you can create a blank loan, you almost always want to provide a few basics. Encompass fields are addressed by their **Field ID** (e.g., \`4000\`, \`4004\`, \`11\`).
+
+> [!CAUTION]
+> Creating a loan **will trigger business rules** in Encompass. If you have field triggers or milestone rules set up on loan creation, they will fire immediately upon this API call.
+
+## Standard Payload Example
+Here is the minimal JSON structure recommended when creating a new lead:
+
+\`\`\`json
+{
+  "borrowerPairs": [
+    {
+      "borrower": {
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "emailAddressText": "jane.doe@example.com",
+        "homePhoneNumber": "555-555-1234"
+      }
+    }
+  ],
+  "loanAmount": 350000,
+  "applications": [
+    {
+      "propertyUsageType": "PrimaryResidence",
+      "propertyState": "CA"
+    }
+  ]
+}
+\`\`\`
+`);
+
+    const loanDelete = await upsertEndpoint(encompass.id, "/encompass/v3/loans/{loanId}", "DELETE", "Delete Loan",
+        "Permanently removes a loan from Encompass. Requires special administrative permissions.", "Loans");
+    const loanPipeline = await upsertEndpoint(encompass.id, "/encompass/v3/loanPipeline", "POST", "Search Loan Pipeline",
+        "Searches the loan pipeline based on provided filter criteria. Can retrieve specific fields like GUID, Loan Number, and Borrower Name.", "Loans");
+
     const tokenPost = await upsertEndpoint(encompass.id, "/oauth2/v1/token", "POST", "Request OAuth2 Token",
         "Authenticates with the Encompass API and returns a bearer token. Requires client credentials and an instance ID.", "Authentication");
+    const tokenIntrospect = await upsertEndpoint(encompass.id, "/oauth2/v1/token/introspection", "POST", "Introspect Token",
+        "Verifies the validity and returns metadata associated with an OAuth2 token.", "Authentication");
+
     const docPost = await upsertEndpoint(encompass.id, "/encompass/v3/loans/{loanId}/attachments", "POST", "Upload Loan Attachment",
-        "Uploads a document attachment to a specific loan. Supports PDF, images, and other document types.", "Documents");
+        "Uploads a document attachment (e.g., PDF, image) directly to the eFolder of a specific loan.", "eFolder / Documents");
+    const docGet = await upsertEndpoint(encompass.id, "/encompass/v3/loans/{loanId}/documents", "GET", "Get Loan Documents",
+        "Retrieves a list of all documents (placeholders and attachments) currently in the loan's eFolder.", "eFolder / Documents");
+    const docCreate = await upsertEndpoint(encompass.id, "/encompass/v3/loans/{loanId}/documents", "POST", "Create Document Placeholder",
+        "Creates a new document placeholder in the loan's eFolder, ready to have attachments assigned to it.", "eFolder / Documents");
+
+    const borrowerContactsGet = await upsertEndpoint(encompass.id, "/encompass/v3/borrowerContacts", "GET", "List Borrower Contacts",
+        "Retrieves a paginated list of borrower contacts from the Encompass database.", "Contacts");
+    const bizContactsGet = await upsertEndpoint(encompass.id, "/encompass/v3/businessContacts", "GET", "List Business Contacts",
+        "Retrieves a paginated list of business contacts (e.g., Realtors, Appraisers).", "Contacts");
+
+    const cdoGet = await upsertEndpoint(encompass.id, "/encompass/v3/loans/{loanId}/customDataObjects", "GET", "List Custom Data Objects (CDOs)",
+        "Retrieves all Custom Data Objects (CDOs) associated with a specific loan.", "Custom Data Objects");
+    const cdoPut = await upsertEndpoint(encompass.id, "/encompass/v3/loans/{loanId}/customDataObjects/{objectName}", "PUT", "Create/Update CDO",
+        "Creates or updates a Custom Data Object (CDO) file stored on the loan. The body payload is stored as a base-64 encoded file.", "Custom Data Objects");
+
+    const webhookCreate = await upsertEndpoint(encompass.id, "/encompass/v3/subscriptions", "POST", "Create Webhook Subscription",
+        "Creates a new event subscription (Webhook). Receive real-time notifications when loan data changes or milestones are completed.", "Webhooks");
+
     const healthEncompass = await upsertEndpoint(encompass.id, "/encompass/v3/settings/systemConfiguration", "GET", "Health Check",
-        "Returns current system configuration settings. Useful as a connectivity/auth check.", "Health");
+        "Returns current system configuration settings. Useful as a connectivity/auth check.", "Settings");
+
+    async function upsertEndpointGuide(endpointId: number, markdown: string) {
+        const existing = await prisma.endpointGuide.findUnique({ where: { endpointId } });
+        if (existing) {
+            return prisma.endpointGuide.update({ where: { id: existing.id }, data: { markdown } });
+        }
+        return prisma.endpointGuide.create({ data: { endpointId, markdown } });
+    }
 
     // ════════════════════════════════════════════
     // MICROSOFT GRAPH
@@ -432,8 +525,78 @@ async function main() {
     const instanceIdParam = await upsertParam(tokenPost.id, "instance_id", "string", "body", true, "The Encompass instance identifier for your organization.");
     await upsertParam(tokenPost.id, "client_id", "string", "body", true, "OAuth2 client ID issued by ICE Mortgage Technology.");
     await upsertParam(tokenPost.id, "client_secret", "string", "body", true, "OAuth2 client secret. Keep this value secure.");
+
     await upsertParam(loanPatch.id, "loanId", "string (UUID)", "path", true, "The unique GUID identifier of the loan to update.");
+    await upsertParam(loanPatch.id, "body", "object", "body", true, "JSON payload containing only the specific loan fields to update.");
+
     await upsertParam(docPost.id, "loanId", "string (UUID)", "path", true, "Loan GUID to attach the document to.");
+    await upsertParam(docPost.id, "action", "string", "query", false, "Use 'add' to append an attachment. Default is 'add'.");
+
+    await upsertParam(loanPipeline.id, "filter", "object", "body", false, "Filter criteria defining the search conditions (e.g., terms, operator).");
+    await upsertParam(loanPipeline.id, "fields", "array", "body", false, "Array of specific field names to return in the pipeline search results.");
+
+    await upsertParam(cdoPut.id, "loanId", "string (UUID)", "path", true, "Loan GUID associated with the CDO.");
+    const cdoObjectNameParam = await upsertParam(cdoPut.id, "objectName", "string", "path", true, "The name of the Custom Data Object (e.g., 'MyCustomData.json').");
+    await upsertParam(cdoPut.id, "file", "string (Base64)", "body", true, "Base-64 encoded string representing the file payload.");
+
+    await prisma.parameterGuide.upsert({
+        where: { parameterId: cdoObjectNameParam.id },
+        create: {
+            parameterId: cdoObjectNameParam.id,
+            markdown: `## Working with Custom Data Objects (CDOs)
+
+CDOs are unstructured data files (e.g., JSON, XML, TXT) that you can attach to a loan or globally to the Encompass system.
+
+### Naming Conventions
+- Avoid spaces and special characters. 
+- Using extensions like \`.json\` or \`.xml\` is best practice for clarity.
+- E.g., \`VendorResponse_123.json\`
+
+### Reading CDOs
+To read a CDO back:
+1. Call \`GET /encompass/v3/loans/{loanId}/customDataObjects/{objectName}\`
+2. The response is a Base64 string.
+3. Decode the string in your application to read the original data.
+
+### Example Payload
+\`\`\`json
+{
+  "file": "eyAiSGVsbG8iOiAiV29ybGQiIH0=" // Base64 for '{ "Hello": "World" }'
+}
+\`\`\``,
+        },
+        update: {},
+    });
+
+    const webhookBodyParam = await upsertParam(webhookCreate.id, "events", "array", "body", true, "List of events to subscribe to (e.g., 'create', 'update').");
+    await upsertParam(webhookCreate.id, "endpoint", "string (URL)", "body", true, "The HTTPS URL where Encompass should send webhook payloads.");
+
+    await prisma.parameterGuide.upsert({
+        where: { parameterId: webhookBodyParam.id },
+        create: {
+            parameterId: webhookBodyParam.id,
+            markdown: `## Encompass Webhooks
+
+Automate your workflow by subscribing to loan events instead of polling the API. Only HTTPS endpoints are supported.
+
+### Common Subscription Events
+- \`update\` : Triggers when any tracked loan field changes.
+- \`create\` : Triggers on new loan creation.
+- \`milestoneComplete\` : Triggers when a loan milestone is finished.
+
+### Example Payload Setup
+\`\`\`json
+{
+  "endpoint": "https://api.yourdomain.com/webhooks/encompass",
+  "events": ["update"],
+  "resource": "loan"
+}
+\`\`\`
+
+> **Security Tip**: Encompass sends an \`Encompass-Signature\` header with every webhook delivery. Always verify the signature using your Client Secret to ensure the payload is authentic.`,
+        },
+        update: {},
+    });
 
     // Microsoft Graph params
     const tenantIdParam = await upsertParam(usersGet.id, "tenant_id", "string (UUID)", "header", true, "Your Azure AD Tenant ID, used in the auth URL.");
