@@ -14,6 +14,32 @@ export function ChatPane() {
     const [messages, setMessages] = useState<Message[]>([]);
     const [input, setInput] = useState("");
     const [isLoading, setIsLoading] = useState(false);
+    const [isMounted, setIsMounted] = useState(false);
+
+    // Hydrate messages from localStorage on mount
+    useEffect(() => {
+        setIsMounted(true);
+        const saved = localStorage.getItem("whodocs-chat-history");
+        if (saved) {
+            try {
+                setMessages(JSON.parse(saved));
+            } catch (e) {
+                console.error("Failed to parse chat history");
+            }
+        }
+    }, []);
+
+    // Save to localStorage whenever messages change (keeping max 10 messages = 5 exchanges)
+    useEffect(() => {
+        if (!isMounted) return;
+
+        let msgsToSave = [...messages];
+        if (msgsToSave.length > 10) {
+            msgsToSave = msgsToSave.slice(msgsToSave.length - 10);
+        }
+
+        localStorage.setItem("whodocs-chat-history", JSON.stringify(msgsToSave));
+    }, [messages, isMounted]);
 
     const messagesEndRef = useRef<HTMLDivElement>(null);
 
@@ -30,14 +56,25 @@ export function ChatPane() {
         if (!input.trim() || isLoading) return;
 
         const userMessage: Message = { role: "user", content: input };
-        setMessages((prev) => [...prev, userMessage]);
+
+        setMessages((prev) => {
+            const next = [...prev, userMessage];
+            if (next.length > 10) return next.slice(next.length - 10);
+            return next;
+        });
+
         setInput("");
         setIsLoading(true);
 
-        const currentMessages = [...messages, userMessage];
+        const currentMessages = [...messages, userMessage].slice(-10);
 
         // Add a temporary empty assistant message
-        setMessages((prev) => [...prev, { role: "assistant", content: "" }]);
+        setMessages((prev) => {
+            const tempMsg: Message = { role: "assistant", content: "" };
+            const next = [...prev, tempMsg];
+            if (next.length > 10) return next.slice(next.length - 10);
+            return next;
+        });
 
         try {
             const response = await fetch("/api/chat", {
@@ -63,6 +100,12 @@ export function ChatPane() {
                     setMessages((prev) => {
                         const newMsgs = [...prev];
                         newMsgs[newMsgs.length - 1].content = fullText;
+
+                        // Keep only recent 10 (5 exchanges) in view
+                        if (newMsgs.length > 10) {
+                            return newMsgs.slice(newMsgs.length - 10);
+                        }
+
                         return newMsgs;
                     });
                 }
