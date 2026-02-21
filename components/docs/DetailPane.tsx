@@ -251,19 +251,46 @@ export function DetailPane({ endpoint }: { endpoint: Endpoint }) {
                             <ReactMarkdown remarkPlugins={[remarkGfm]}>
                                 {completion}
                             </ReactMarkdown>
+                        ) : isLoading ? (
+                            <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+                                <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", color: "var(--accent)", marginBottom: "1rem" }}>
+                                    <Sparkles size={16} className="spin-slow" />
+                                    <span style={{ fontSize: "0.9rem", fontWeight: 600 }}>Cerebras AI is generating your guide...</span>
+                                </div>
+                                <div className="skeleton-line" style={{ width: "100%", height: "24px", borderRadius: "12px", background: "var(--bg-tertiary)", animation: "pulse 1.5s infinite" }} />
+                                <div className="skeleton-line" style={{ width: "90%", height: "16px", borderRadius: "8px", background: "var(--bg-tertiary)", animation: "pulse 1.5s infinite", animationDelay: "0.2s" }} />
+                                <div className="skeleton-line" style={{ width: "95%", height: "16px", borderRadius: "8px", background: "var(--bg-tertiary)", animation: "pulse 1.5s infinite", animationDelay: "0.4s" }} />
+                                <div className="skeleton-line" style={{ width: "80%", height: "16px", borderRadius: "8px", background: "var(--bg-tertiary)", animation: "pulse 1.5s infinite", animationDelay: "0.6s" }} />
+                            </div>
                         ) : (
-                            <div style={{ textAlign: "center", padding: "2rem" }}>
-                                <Sparkles size={32} style={{ color: "var(--accent)", margin: "0 auto 1rem", opacity: 0.5 }} />
-                                <h3 style={{ marginBottom: "1rem", color: "var(--text)" }}>AI Explanation Not Available</h3>
-                                <p style={{ color: "var(--text-muted)", marginBottom: "1.5rem" }}>
-                                    Generate a comprehensive, AI-powered guide for this endpoint on demand.
+                            <div style={{ textAlign: "center", padding: "4rem 2rem", display: "flex", flexDirection: "column", alignItems: "center" }}>
+                                <div style={{
+                                    width: "80px", height: "80px", borderRadius: "24px",
+                                    background: "radial-gradient(circle at top left, color-mix(in srgb, var(--accent) 20%, transparent), transparent)",
+                                    border: "1px solid color-mix(in srgb, var(--accent) 30%, transparent)",
+                                    display: "flex", alignItems: "center", justifyContent: "center",
+                                    marginBottom: "1.5rem", boxShadow: "0 10px 30px color-mix(in srgb, var(--accent) 10%, transparent)"
+                                }}>
+                                    <Sparkles size={36} style={{ color: "var(--accent)" }} />
+                                </div>
+                                <h3 style={{ marginBottom: "0.75rem", color: "var(--text)", fontSize: "1.3rem", fontWeight: 700, letterSpacing: "-0.01em" }}>Supercharge your docs</h3>
+                                <p style={{ color: "var(--text-muted)", marginBottom: "2rem", maxWidth: "400px", lineHeight: 1.6, fontSize: "0.95rem" }}>
+                                    Instantly generate a comprehensive, production-ready Markdown guide with code examples and best practices.
                                 </p>
                                 <button
-                                    className="btn btn-primary"
                                     onClick={generateExplanation}
-                                    disabled={isLoading}
+                                    style={{
+                                        background: "var(--text)", color: "var(--bg)", border: "none",
+                                        padding: "0.75rem 1.75rem", borderRadius: "100px", fontSize: "0.9rem",
+                                        fontWeight: 600, display: "flex", alignItems: "center", gap: "0.5rem",
+                                        cursor: "pointer", boxShadow: "0 8px 16px rgba(0,0,0,0.1)",
+                                        transition: "transform 0.2s ease, box-shadow 0.2s ease"
+                                    }}
+                                    onMouseOver={(e) => e.currentTarget.style.transform = "translateY(-2px)"}
+                                    onMouseOut={(e) => e.currentTarget.style.transform = "translateY(0)"}
                                 >
-                                    {isLoading ? "Generating..." : "✨ Generate AI Explanation"}
+                                    <Sparkles size={16} />
+                                    Generate AI Explanation
                                 </button>
                             </div>
                         )

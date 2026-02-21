@@ -14,6 +14,7 @@ export function ChatPane() {
     const [messages, setMessages] = useState<Message[]>([]);
     const [input, setInput] = useState("");
     const [isLoading, setIsLoading] = useState(false);
+
     const messagesEndRef = useRef<HTMLDivElement>(null);
 
     const scrollToBottom = () => {
@@ -70,7 +71,7 @@ export function ChatPane() {
             console.error(error);
             setMessages((prev) => {
                 const newMsgs = [...prev];
-                newMsgs[newMsgs.length - 1].content = "Sorry, an error occurred while connecting to HashTurn AI.";
+                newMsgs[newMsgs.length - 1].content = "Sorry, an error occurred while connecting to Whodocs AI.";
                 return newMsgs;
             });
         } finally {
@@ -105,7 +106,7 @@ export function ChatPane() {
             }}>
                 <h1 style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontSize: "1rem", margin: 0, fontWeight: 600 }}>
                     <Sparkles size={16} style={{ color: "var(--accent)" }} />
-                    HashTurn API Assistant
+                    Whodocs API Assistant
                 </h1>
             </div>
 
@@ -128,7 +129,7 @@ export function ChatPane() {
                         </div>
                     )}
 
-                    {messages.map((message, index) => (
+                    {messages.map((message: Message, index: number) => (
                         <div key={index} style={{
                             display: "flex",
                             gap: "1.25rem",
@@ -205,7 +206,7 @@ export function ChatPane() {
                         value={input}
                         onChange={(e) => setInput(e.target.value)}
                         onKeyDown={handleKeyDown}
-                        placeholder="Message HashTurn API Assistant..."
+                        placeholder="Message Whodocs API Assistant..."
                         disabled={isLoading}
                         rows={1}
                         style={{
