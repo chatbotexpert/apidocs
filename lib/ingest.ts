@@ -73,6 +73,13 @@ export async function ingestOpenAPISpec(platformId: number, spec: OASpec) {
             }
 
             for (const param of parameters) {
+                // SKIP malformed parameters (e.g., unresolved $refs in complex specs)
+                if (!param.name) {
+                    console.warn(`[INGEST] Skipping unnamed parameter for ${methodUpper} ${path}`);
+                    continue;
+                }
+
+                const location = param.in || "query";
                 const type = param.schema?.type ?? "string";
 
                 const existing = await prisma.parameter.findFirst({
@@ -84,10 +91,9 @@ export async function ingestOpenAPISpec(platformId: number, spec: OASpec) {
                         where: { id: existing.id },
                         data: {
                             type,
-                            location: param.in,
+                            location,
                             isRequired: param.required ?? false,
                             description: param.description ?? null,
-                            // NOTE: guide is NOT updated — preserves human-written content
                         },
                     });
                 } else {
@@ -96,7 +102,7 @@ export async function ingestOpenAPISpec(platformId: number, spec: OASpec) {
                             endpointId: endpoint.id,
                             name: param.name,
                             type,
-                            location: param.in,
+                            location,
                             isRequired: param.required ?? false,
                             description: param.description ?? null,
                         },
