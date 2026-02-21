@@ -88,16 +88,20 @@ export function ChatPane() {
     return (
         <div style={{ display: "flex", flexDirection: "column", height: "100%", position: "relative", background: "var(--bg)" }}>
             {/* Header */}
-            <div style={{
+            <div className="glass-panel" style={{
                 padding: "1rem 2rem",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "space-between",
-                borderBottom: "1px solid var(--border)",
-                background: "var(--bg)",
                 position: "sticky",
                 top: 0,
-                zIndex: 10
+                zIndex: 10,
+                borderBottom: "1px solid color-mix(in srgb, var(--border) 40%, transparent)",
+                borderTop: "none",
+                borderLeft: "none",
+                borderRight: "none",
+                borderRadius: 0,
+                boxShadow: "none"
             }}>
                 <h1 style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontSize: "1rem", margin: 0, fontWeight: 600 }}>
                     <Sparkles size={16} style={{ color: "var(--accent)" }} />
@@ -184,21 +188,18 @@ export function ChatPane() {
                 display: "flex",
                 justifyContent: "center",
                 pointerEvents: "none",
-                padding: "0 2rem"
+                padding: "0 2rem",
+                zIndex: 20
             }}>
-                <form onSubmit={handleSubmit} style={{
+                <form onSubmit={handleSubmit} className="glass-pill" style={{
                     position: "relative",
                     width: "100%",
                     maxWidth: "768px",
                     pointerEvents: "auto",
-                    background: "var(--bg)",
-                    border: "1px solid var(--border)",
-                    boxShadow: "0 12px 24px rgba(0,0,0,0.06), 0 4px 8px rgba(0,0,0,0.03)",
-                    borderRadius: "24px",
                     display: "flex",
                     alignItems: "flex-end",
                     padding: "0.5rem 0.75rem",
-                    transition: "box-shadow 0.2s ease"
+                    transition: "box-shadow 0.2s ease, transform 0.2s ease"
                 }}>
                     <textarea
                         value={input}

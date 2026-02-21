@@ -120,15 +120,23 @@ export function CodePane({ endpoint }: { endpoint: Endpoint }) {
                 ))}
             </div>
 
-            <div className="code-block">
+            <div className="code-block" style={{
+                margin: "1rem",
+                borderRadius: "12px",
+                border: "1px solid rgba(255,255,255,0.05)",
+                background: "rgba(0,0,0,0.2)",
+                boxShadow: "inset 0 4px 12px rgba(0,0,0,0.1)",
+                padding: "0.25rem"
+            }}>
                 <SyntaxHighlighter
                     language={langMap[lang]}
                     style={vscDarkPlus}
                     customStyle={{
                         background: "transparent",
-                        fontSize: "0.78rem",
+                        fontSize: "0.82rem",
+                        lineHeight: 1.6,
                         margin: 0,
-                        padding: 0,
+                        padding: "1rem",
                     }}
                     wrapLongLines
                 >
@@ -136,8 +144,14 @@ export function CodePane({ endpoint }: { endpoint: Endpoint }) {
                 </SyntaxHighlighter>
             </div>
 
-            <div style={{ borderTop: "1px solid #21262d", padding: "0.75rem 1rem" }}>
-                <div style={{ fontSize: "0.7rem", color: "#8b949e", textTransform: "uppercase", letterSpacing: "0.07em", marginBottom: "0.5rem" }}>
+            <div style={{
+                margin: "0 1rem 1rem",
+                borderRadius: "12px",
+                border: "1px solid rgba(255,255,255,0.05)",
+                background: "rgba(0,0,0,0.2)",
+                boxShadow: "inset 0 4px 12px rgba(0,0,0,0.1)"
+            }}>
+                <div style={{ padding: "0.75rem 1rem", borderBottom: "1px solid rgba(255,255,255,0.05)", fontSize: "0.7rem", color: "#8b949e", textTransform: "uppercase", letterSpacing: "0.07em" }}>
                     Sample Response
                 </div>
                 <SyntaxHighlighter

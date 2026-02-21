@@ -237,12 +237,10 @@ export function DetailPane({ endpoint }: { endpoint: Endpoint }) {
                 </>
             ) : (
                 /* Endpoint AI Explanation Area */
-                <div className="markdown" style={{
-                    background: "var(--bg-secondary)",
+                <div className="markdown glass-panel" style={{
                     padding: "2rem",
                     borderRadius: "12px",
                     border: "1px solid color-mix(in srgb, var(--accent) 30%, transparent)",
-                    boxShadow: "0 4px 20px rgba(0,0,0,0.02)"
                 }}>
                     {endpoint.guide ? (
                         <ReactMarkdown remarkPlugins={[remarkGfm]}>
