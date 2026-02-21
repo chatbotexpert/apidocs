@@ -2,8 +2,9 @@
 
 import { useState, useCallback } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { vscDarkPlus, vs } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { Copy, Check } from "lucide-react";
+import { useTheme } from "@/lib/theme";
 
 interface Endpoint {
     path: string;
@@ -85,6 +86,7 @@ const SAMPLE_RESPONSE = {
 };
 
 export function CodePane({ endpoint }: { endpoint: Endpoint }) {
+    const { dark } = useTheme();
     const [lang, setLang] = useState<Lang>("curl");
     const [copied, setCopied] = useState(false);
 
@@ -130,7 +132,7 @@ export function CodePane({ endpoint }: { endpoint: Endpoint }) {
             }}>
                 <SyntaxHighlighter
                     language={langMap[lang]}
-                    style={vscDarkPlus}
+                    style={dark ? vscDarkPlus : vs}
                     customStyle={{
                         background: "transparent",
                         fontSize: "0.82rem",
@@ -147,19 +149,20 @@ export function CodePane({ endpoint }: { endpoint: Endpoint }) {
             <div style={{
                 margin: "0 1rem 1rem",
                 borderRadius: "12px",
-                border: "1px solid rgba(255,255,255,0.05)",
-                background: "rgba(0,0,0,0.2)",
-                boxShadow: "inset 0 4px 12px rgba(0,0,0,0.1)"
+                border: "1px solid color-mix(in srgb, var(--border) 40%, transparent)",
+                background: "var(--code-overlay)",
+                boxShadow: "inset 0 4px 12px rgba(0,0,0,0.03)"
             }}>
-                <div style={{ padding: "0.75rem 1rem", borderBottom: "1px solid rgba(255,255,255,0.05)", fontSize: "0.7rem", color: "#8b949e", textTransform: "uppercase", letterSpacing: "0.07em" }}>
+                <div style={{ padding: "0.75rem 1rem", borderBottom: "1px solid color-mix(in srgb, var(--border) 40%, transparent)", fontSize: "0.7rem", color: "var(--code-tab-text)", textTransform: "uppercase", letterSpacing: "0.07em" }}>
                     Sample Response
                 </div>
                 <SyntaxHighlighter
                     language="json"
-                    style={vscDarkPlus}
+                    style={dark ? vscDarkPlus : vs}
                     customStyle={{
-                        background: "#010409",
-                        borderRadius: "6px",
+                        background: "transparent",
+                        borderBottomLeftRadius: "12px",
+                        borderBottomRightRadius: "12px",
                         fontSize: "0.75rem",
                         margin: 0,
                         maxHeight: "200px",
