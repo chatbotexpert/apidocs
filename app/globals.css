@@ -440,6 +440,13 @@ code {
   border: 1px solid color-mix(in srgb, var(--border) 20%, transparent);
 }
 
+pre code,
+.code-pane code {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
 .required-dot {
   display: inline-block;
   width: 6px;
