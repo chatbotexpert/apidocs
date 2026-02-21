@@ -101,12 +101,29 @@ export function CodePane({ endpoint }: { endpoint: Endpoint }) {
     const langMap: Record<Lang, string> = { curl: "bash", python: "python", javascript: "javascript" };
 
     return (
-        <div className="code-pane">
-            <div className="code-pane-header">
-                <span className="code-pane-title">Code Snippet</span>
-                <button className="copy-btn" onClick={copy}>
+        <div className="code-pane" style={{
+            background: "linear-gradient(to bottom right, var(--code-bg), color-mix(in srgb, var(--code-bg) 70%, transparent))",
+            borderRadius: "16px",
+            border: "1px solid color-mix(in srgb, var(--border) 35%, transparent)",
+            boxShadow: "0 10px 40px -10px rgba(0,0,0,0.5), inset 0 1px 1px rgba(255,255,255,0.05)",
+            overflow: "hidden"
+        }}>
+            <div className="code-pane-header" style={{
+                background: "color-mix(in srgb, var(--bg-secondary) 50%, transparent)",
+                backdropFilter: "blur(12px)",
+                borderBottom: "1px solid color-mix(in srgb, var(--border) 20%, transparent)"
+            }}>
+                <span className="code-pane-title" style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
+                    <div style={{ width: "8px", height: "8px", borderRadius: "50%", background: "var(--accent)", boxShadow: "0 0 10px var(--accent)" }}></div>
+                    Code Snippet
+                </span>
+                <button className="copy-btn" onClick={copy} style={{
+                    background: copied ? "color-mix(in srgb, var(--success) 15%, transparent)" : "var(--code-overlay)",
+                    color: copied ? "var(--success)" : "var(--code-tab-text)",
+                    borderColor: copied ? "color-mix(in srgb, var(--success) 30%, transparent)" : "color-mix(in srgb, var(--border) 40%, transparent)"
+                }}>
                     {copied ? <Check size={12} /> : <Copy size={12} />}
-                    {copied ? "Copied!" : "Copy"}
+                    {copied ? "Copied" : "Copy"}
                 </button>
             </div>
 
@@ -125,10 +142,11 @@ export function CodePane({ endpoint }: { endpoint: Endpoint }) {
             <div className="code-block" style={{
                 margin: "1rem",
                 borderRadius: "12px",
-                border: "1px solid color-mix(in srgb, var(--border) 40%, transparent)",
-                backgroundColor: "var(--code-overlay)",
-                boxShadow: "inset 0 4px 12px rgba(0,0,0,0.03)",
-                padding: "0.25rem"
+                border: "1px solid color-mix(in srgb, var(--border) 20%, transparent)",
+                background: "linear-gradient(180deg, var(--code-overlay) 0%, transparent 100%)",
+                boxShadow: "inset 0 2px 4px rgba(0,0,0,0.2)",
+                padding: "0.25rem",
+                position: "relative"
             }}>
                 <SyntaxHighlighter
                     language={langMap[lang]}
@@ -149,9 +167,9 @@ export function CodePane({ endpoint }: { endpoint: Endpoint }) {
             <div style={{
                 margin: "0 1rem 1rem",
                 borderRadius: "12px",
-                border: "1px solid color-mix(in srgb, var(--border) 40%, transparent)",
-                backgroundColor: "var(--code-overlay)",
-                boxShadow: "inset 0 4px 12px rgba(0,0,0,0.03)"
+                border: "1px solid color-mix(in srgb, var(--border) 20%, transparent)",
+                background: "linear-gradient(180deg, var(--code-overlay) 0%, transparent 100%)",
+                boxShadow: "inset 0 2px 4px rgba(0,0,0,0.2)"
             }}>
                 <div style={{ padding: "0.75rem 1rem", borderBottom: "1px solid color-mix(in srgb, var(--border) 40%, transparent)", fontSize: "0.7rem", color: "var(--code-tab-text)", textTransform: "uppercase", letterSpacing: "0.07em" }}>
                     Sample Response
