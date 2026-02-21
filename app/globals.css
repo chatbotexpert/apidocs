@@ -1053,6 +1053,34 @@ code {
   }
 }
 
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulse-glow {
+  0% {
+    text-shadow: 0 0 10px color-mix(in srgb, var(--accent) 30%, transparent);
+  }
+
+  50% {
+    text-shadow: 0 0 25px color-mix(in srgb, var(--accent) 60%, transparent);
+  }
+
+  100% {
+    text-shadow: 0 0 10px color-mix(in srgb, var(--accent) 30%, transparent);
+  }
+}
+
 @media (max-width: 700px) {
   .docs-layout {
     grid-template-columns: 1fr;

@@ -64,8 +64,26 @@ export function NavPane() {
         <>
             {showSearch && <SearchModal onClose={() => setShowSearch(false)} />}
             <nav className="nav-pane">
-                <div className="nav-header">
-                    <span className="logo">Hash<span>Turn</span> API</span>
+                <div className="nav-header" style={{ position: "relative", paddingBottom: "1.25rem", borderBottom: "1px solid color-mix(in srgb, var(--border) 40%, transparent)", marginBottom: "1rem" }}>
+                    <Link href="/docs" style={{ textDecoration: "none" }}>
+                        <span className="logo" style={{
+                            fontSize: "1.35rem",
+                            fontWeight: 800,
+                            letterSpacing: "-0.03em",
+                            background: "linear-gradient(270deg, var(--text) 0%, var(--accent) 50%, var(--text) 100%)",
+                            backgroundSize: "200% auto",
+                            WebkitBackgroundClip: "text",
+                            WebkitTextFillColor: "transparent",
+                            animation: "gradient-shift 6s ease infinite",
+                            display: "inline-block"
+                        }}>
+                            Who<span style={{
+                                animation: "pulse-glow 3s infinite",
+                                color: "var(--accent)",
+                                WebkitTextFillColor: "var(--accent)"
+                            }}>docs</span>
+                        </span>
+                    </Link>
                     <ThemeToggle />
                 </div>
                 <div style={{ padding: "0.5rem 0.75rem 0" }}>
@@ -79,7 +97,7 @@ export function NavPane() {
                         transition: "all 0.2s ease"
                     }} className="search-trigger">
                         <Sparkles size={14} />
-                        <span>HashTurn AI Assistant</span>
+                        <span>Whodocs AI Assistant</span>
                     </Link>
                     <button className="search-trigger" onClick={() => setShowSearch(true)}>
                         <Search size={13} />
