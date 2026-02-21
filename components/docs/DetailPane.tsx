@@ -119,7 +119,14 @@ export function DetailPane({ endpoint }: { endpoint: Endpoint }) {
     return (
         <div className="detail-pane">
             {/* Header */}
-            <div style={{ marginBottom: "2rem" }}>
+            <div style={{
+                marginBottom: "2rem",
+                padding: "2rem",
+                background: "linear-gradient(135deg, color-mix(in srgb, var(--code-bg) 60%, transparent), transparent)",
+                border: "1px solid color-mix(in srgb, var(--border) 40%, transparent)",
+                borderRadius: "16px",
+                boxShadow: "0 10px 40px -10px rgba(0,0,0,0.2), inset 0 1px 1px rgba(255,255,255,0.05)"
+            }}>
                 <div className="endpoint-header">
                     <MethodBadge method={endpoint.method} />
                     <code className="endpoint-path">{endpoint.path}</code>
@@ -129,55 +136,60 @@ export function DetailPane({ endpoint }: { endpoint: Endpoint }) {
                 {endpoint.description && (
                     <p className="endpoint-description">{endpoint.description}</p>
                 )}
-                <div style={{ display: "flex", gap: "1rem", fontSize: "0.78rem", color: "var(--text-muted)" }}>
-                    <span>Base URL: <code>{endpoint.platform.baseUrl}</code></span>
-                    <span>Auth: <code>{endpoint.platform.authType}</code></span>
-                    {endpoint.category && <span>Category: <code>{endpoint.category}</code></span>}
+                <div style={{
+                    display: "flex", flexWrap: "wrap", gap: "1rem", fontSize: "0.78rem",
+                    color: "var(--text-muted)",
+                    paddingTop: "1.5rem", marginTop: "1rem",
+                    borderTop: "1px solid color-mix(in srgb, var(--border) 30%, transparent)"
+                }}>
+                    <span>Base URL: <code style={{ background: "color-mix(in srgb, var(--accent) 15%, transparent)", color: "var(--accent)" }}>{endpoint.platform.baseUrl}</code></span>
+                    <span>Auth: <code style={{ background: "color-mix(in srgb, var(--accent) 15%, transparent)", color: "var(--accent)" }}>{endpoint.platform.authType}</code></span>
+                    {endpoint.category && <span>Category: <code style={{ background: "color-mix(in srgb, var(--accent) 15%, transparent)", color: "var(--accent)" }}>{endpoint.category}</code></span>}
                 </div>
             </div>
 
             {/* Tabs for Overview vs AI Content */}
             <div style={{
-                display: "flex",
-                gap: "1rem",
-                borderBottom: "1px solid var(--border)",
-                marginBottom: "2rem",
-                paddingBottom: "0.5rem"
+                display: "flex", gap: "0.5rem", marginBottom: "2rem",
+                borderBottom: "1px solid color-mix(in srgb, var(--border) 40%, transparent)",
+                paddingBottom: "1rem"
             }}>
                 <button
                     onClick={() => setActiveTab("overview")}
                     style={{
-                        background: "none",
-                        border: "none",
-                        fontSize: "0.9rem",
-                        fontWeight: 600,
-                        padding: "0.5rem 0.2rem",
-                        cursor: "pointer",
+                        padding: "0.6rem 1.25rem",
+                        background: activeTab === "overview" ? "color-mix(in srgb, var(--text) 5%, transparent)" : "transparent",
                         color: activeTab === "overview" ? "var(--text)" : "var(--text-muted)",
-                        borderBottom: activeTab === "overview" ? "2px solid var(--accent)" : "2px solid transparent",
+                        border: activeTab === "overview" ? "1px solid color-mix(in srgb, var(--border) 60%, transparent)" : "1px solid transparent",
+                        borderRadius: "8px",
+                        cursor: "pointer",
+                        fontWeight: 600,
+                        fontSize: "0.85rem",
+                        display: "flex", alignItems: "center", gap: "0.5rem",
+                        boxShadow: activeTab === "overview" ? "0 4px 12px rgba(0,0,0,0.1)" : "none",
                         transition: "all 0.2s ease"
                     }}
                 >
+                    <BookOpen size={14} />
                     Overview
                 </button>
                 <button
                     onClick={() => setActiveTab("ai")}
                     style={{
-                        background: "none",
-                        border: "none",
-                        fontSize: "0.9rem",
-                        fontWeight: 600,
-                        padding: "0.5rem 0.2rem",
+                        padding: "0.6rem 1.25rem",
+                        background: activeTab === "ai" ? "color-mix(in srgb, var(--text) 5%, transparent)" : "transparent",
+                        color: activeTab === "ai" ? "var(--accent)" : "var(--text-muted)",
+                        border: activeTab === "ai" ? "1px solid color-mix(in srgb, var(--border) 60%, transparent)" : "1px solid transparent",
+                        borderRadius: "8px",
                         cursor: "pointer",
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "0.4rem",
-                        color: activeTab === "ai" ? "var(--text)" : "var(--text-muted)",
-                        borderBottom: activeTab === "ai" ? "2px solid var(--accent)" : "2px solid transparent",
+                        fontWeight: 600,
+                        fontSize: "0.85rem",
+                        display: "flex", alignItems: "center", gap: "0.5rem",
+                        boxShadow: activeTab === "ai" ? "0 4px 12px rgba(0,0,0,0.1)" : "none",
                         transition: "all 0.2s ease"
                     }}
                 >
-                    <Sparkles size={14} style={{ color: activeTab === "ai" ? "var(--accent)" : "currentColor" }} />
+                    <Sparkles size={14} />
                     AI Explanation
                 </button>
             </div>
