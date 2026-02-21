@@ -1,0 +1,3667 @@
+[
+  {
+    "method": "GET",
+    "path": "/api-previews",
+    "summary": "API Previews"
+  },
+  {
+    "method": "GET",
+    "path": "/contracts-11",
+    "summary": "Loan Opportunity Settings"
+  },
+  {
+    "method": "GET",
+    "path": "/contracts-11",
+    "summary": "Contracts"
+  },
+  {
+    "method": "GET",
+    "path": "/get-affordability-qualification",
+    "summary": "Affordability"
+  },
+  {
+    "method": "GET",
+    "path": "/get-affordability-qualification",
+    "summary": "Get Affordability Qualification Settingsget"
+  },
+  {
+    "method": "GET",
+    "path": "/create-affordability-qualification-setting",
+    "summary": "Create Affordability Qualification Settingspost"
+  },
+  {
+    "method": "GET",
+    "path": "/update-affordabilityqualification",
+    "summary": "Update Affordability Qualification Settingsput"
+  },
+  {
+    "method": "GET",
+    "path": "/delete-affordability-qualification",
+    "summary": "Delete an Affordability Qualificationdel"
+  },
+  {
+    "method": "GET",
+    "path": "/get-email-templates",
+    "summary": "Email Template Management"
+  },
+  {
+    "method": "GET",
+    "path": "/get-email-templates",
+    "summary": "Get Email Templateget"
+  },
+  {
+    "method": "GET",
+    "path": "/create-new-email-template",
+    "summary": "Create Email Templatepost"
+  },
+  {
+    "method": "GET",
+    "path": "/get-email-template-details",
+    "summary": "Get Email Template Detailsget"
+  },
+  {
+    "method": "GET",
+    "path": "/update-email-template",
+    "summary": "Update Email Templateput"
+  },
+  {
+    "method": "GET",
+    "path": "/delete-an-email-template",
+    "summary": "Delete an Email Templatedel"
+  },
+  {
+    "method": "GET",
+    "path": "/get-feature-management",
+    "summary": "Feature Management"
+  },
+  {
+    "method": "GET",
+    "path": "/get-feature-management",
+    "summary": "Get Feature Management Settingsget"
+  },
+  {
+    "method": "GET",
+    "path": "/create-new-feature",
+    "summary": "Create New Featurepost"
+  },
+  {
+    "method": "GET",
+    "path": "/update-feature-management",
+    "summary": "Update a Feature Management Settingpatch"
+  },
+  {
+    "method": "GET",
+    "path": "/update-a-feature",
+    "summary": "Update a Featureput"
+  },
+  {
+    "method": "GET",
+    "path": "/delete-a-feature-management-setting",
+    "summary": "Delete a Feature Management Settingdel"
+  },
+  {
+    "method": "GET",
+    "path": "/get-letter-template",
+    "summary": "Letter Template Management"
+  },
+  {
+    "method": "GET",
+    "path": "/get-letter-template",
+    "summary": "Get List of Letter Templatesget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-letter-template-details",
+    "summary": "Get Letter Template Detailsget"
+  },
+  {
+    "method": "GET",
+    "path": "/create-a-new-letter-template",
+    "summary": "Create a Letter Templatepost"
+  },
+  {
+    "method": "GET",
+    "path": "/update-existing-letter-template",
+    "summary": "Update Letter Templateput"
+  },
+  {
+    "method": "GET",
+    "path": "/delete-a-letter-template",
+    "summary": "Delete Letter Templatedel"
+  },
+  {
+    "method": "GET",
+    "path": "/loan-opportunity",
+    "summary": "Loan Opportunity Management"
+  },
+  {
+    "method": "GET",
+    "path": "/contracts-12",
+    "summary": "Contracts"
+  },
+  {
+    "method": "GET",
+    "path": "/get-a-scenario",
+    "summary": "Get All Scenariosget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-a-scenario-1",
+    "summary": "Get a Scenarioget"
+  },
+  {
+    "method": "GET",
+    "path": "/create-a-scenario",
+    "summary": "Create a Scenariopost"
+  },
+  {
+    "method": "GET",
+    "path": "/update-a-scenario",
+    "summary": "Update a Scenarioput"
+  },
+  {
+    "method": "GET",
+    "path": "/updates-a-scenario",
+    "summary": "Updates a Scenariopatch"
+  },
+  {
+    "method": "GET",
+    "path": "/delete-a-scenario",
+    "summary": "Delete a Scenariodel"
+  },
+  {
+    "method": "GET",
+    "path": "/convert-scenario-to-loan",
+    "summary": "Convert Scenario to Loanget"
+  },
+  {
+    "method": "GET",
+    "path": "/create-a-notification",
+    "summary": "Send a Notification Requestpost"
+  },
+  {
+    "method": "GET",
+    "path": "/get-a-loan-opportunity",
+    "summary": "Get a Loan Opportunityget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-loan-opportunities",
+    "summary": "Get Loan Opportunitiesget"
+  },
+  {
+    "method": "GET",
+    "path": "/create-loan-opportunity",
+    "summary": "Create Loan Opportunitypost"
+  },
+  {
+    "method": "GET",
+    "path": "/update-loan-opportunity-1",
+    "summary": "Update Loan Opportunitypatch"
+  },
+  {
+    "method": "GET",
+    "path": "/update-loan-opportunity",
+    "summary": "Replace Loan Opportunityput"
+  },
+  {
+    "method": "GET",
+    "path": "/delete-loan-opportunity",
+    "summary": "Delete Loan Opportunitydel"
+  },
+  {
+    "method": "GET",
+    "path": "/convert-loan-opportunity",
+    "summary": "Convert Loan Opportunitypost"
+  },
+  {
+    "method": "GET",
+    "path": "/contracts-13",
+    "summary": "Document Management for an Opportunity"
+  },
+  {
+    "method": "GET",
+    "path": "/contracts-13",
+    "summary": "Contracts"
+  },
+  {
+    "method": "GET",
+    "path": "/get-a-document",
+    "summary": "Get a Documentget"
+  },
+  {
+    "method": "GET",
+    "path": "/create-a-document",
+    "summary": "Create a Documentpost"
+  },
+  {
+    "method": "GET",
+    "path": "/update-a-document",
+    "summary": "Update a Documentpatch"
+  },
+  {
+    "method": "GET",
+    "path": "/loan-opportunity-selector",
+    "summary": "Loan Opportunity Selector"
+  },
+  {
+    "method": "GET",
+    "path": "/get-loan-opportunities-with-search",
+    "summary": "Get Loan Opportunities with Searchget"
+  },
+  {
+    "method": "GET",
+    "path": "/prospect-engagement",
+    "summary": "Prospect Engagement"
+  },
+  {
+    "method": "GET",
+    "path": "/contracts-14",
+    "summary": "Contracts"
+  },
+  {
+    "method": "GET",
+    "path": "/create-an-invitation",
+    "summary": "Create Invitation URLpost"
+  },
+  {
+    "method": "GET",
+    "path": "/create-reminder-url",
+    "summary": "Create Reminder URLpost"
+  },
+  {
+    "method": "GET",
+    "path": "/get-packages",
+    "summary": "Packages"
+  },
+  {
+    "method": "GET",
+    "path": "/get-packages",
+    "summary": "Get Packagesget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-package",
+    "summary": "Get Packageget"
+  },
+  {
+    "method": "GET",
+    "path": "/create-session-api",
+    "summary": "Point of Sale Integration Framework"
+  },
+  {
+    "method": "GET",
+    "path": "/create-session-api",
+    "summary": "Contracts"
+  },
+  {
+    "method": "GET",
+    "path": "/create-package-event",
+    "summary": "Create a Package Eventpost"
+  },
+  {
+    "method": "GET",
+    "path": "/create-a-session",
+    "summary": "Create a Sessionpost"
+  },
+  {
+    "method": "GET",
+    "path": "/borrower-contacts-management",
+    "summary": "Borrower"
+  },
+  {
+    "method": "GET",
+    "path": "/borrower-contracts",
+    "summary": "V1 Contracts"
+  },
+  {
+    "method": "GET",
+    "path": "/loan-linking-contacts-to-a-loan",
+    "summary": "Link Borrower Contacts to a Loan"
+  },
+  {
+    "method": "GET",
+    "path": "/get-borrower-contact-list",
+    "summary": "V1 Get Borrower Contact Listpost"
+  },
+  {
+    "method": "GET",
+    "path": "/get-borrower-contacts",
+    "summary": "V1 Get a Borrower Contactget"
+  },
+  {
+    "method": "GET",
+    "path": "/view-contacts-with-pagination",
+    "summary": "V1 View Borrower Contacts (with Pagination)post"
+  },
+  {
+    "method": "GET",
+    "path": "/create-contact",
+    "summary": "V1 Create Borrower Contactpost"
+  },
+  {
+    "method": "GET",
+    "path": "/update-contact",
+    "summary": "V1 Update Borrower Contactpatch"
+  },
+  {
+    "method": "GET",
+    "path": "/delete-borrower-contact",
+    "summary": "V1 Delete Borrower Contactdel"
+  },
+  {
+    "method": "GET",
+    "path": "/get-notes",
+    "summary": "V1 Get All Notes for a Borrower Contactget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-note",
+    "summary": "V1 Get a Note for a Borrower Contactget"
+  },
+  {
+    "method": "GET",
+    "path": "/create-note",
+    "summary": "V1 Create a Note for a Borrower Contactpost"
+  },
+  {
+    "method": "GET",
+    "path": "/update-note",
+    "summary": "V1 Update a Note for a Borrower Contactpatch"
+  },
+  {
+    "method": "GET",
+    "path": "/delete-note",
+    "summary": "V1 Delete a Note for a Borrower Contactdel"
+  },
+  {
+    "method": "GET",
+    "path": "/contacts-groups",
+    "summary": "Groups"
+  },
+  {
+    "method": "GET",
+    "path": "/groups",
+    "summary": "V1 Contracts"
+  },
+  {
+    "method": "GET",
+    "path": "/get-contact-groups",
+    "summary": "V1 Get All Contact Groupsget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-contact-group",
+    "summary": "V1 Get a Contact Groupget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-all-contacts-in-contact-group",
+    "summary": "V1 Get All Contacts in Contact Groupget"
+  },
+  {
+    "method": "GET",
+    "path": "/create-contact-group",
+    "summary": "V1 Create Contact Grouppost"
+  },
+  {
+    "method": "GET",
+    "path": "/add-or-remove-group-contacts",
+    "summary": "V1 Add or Remove Group Contactspatch"
+  },
+  {
+    "method": "GET",
+    "path": "/update-contact-group",
+    "summary": "V1 Update a Contact Grouppatch"
+  },
+  {
+    "method": "GET",
+    "path": "/delete-contact-group",
+    "summary": "V1 Delete a Contact Groupdel"
+  },
+  {
+    "method": "GET",
+    "path": "/business-contact-management",
+    "summary": "Business"
+  },
+  {
+    "method": "GET",
+    "path": "/contracts",
+    "summary": "V1 Contracts"
+  },
+  {
+    "method": "GET",
+    "path": "/linking-business-contacts-to-a-loan",
+    "summary": "Link Business Contacts to a Loan"
+  },
+  {
+    "method": "GET",
+    "path": "/get-business-contact-list",
+    "summary": "V1 Get Business Contact Listpost"
+  },
+  {
+    "method": "GET",
+    "path": "/get-contact-business",
+    "summary": "V1 Get a Business Contactget"
+  },
+  {
+    "method": "GET",
+    "path": "/view-contacts-with-pagination-1",
+    "summary": "V1 View Business Contacts (with Pagination)post"
+  },
+  {
+    "method": "GET",
+    "path": "/create-contact-business",
+    "summary": "V1 Create a Business Contactpost"
+  },
+  {
+    "method": "GET",
+    "path": "/update-contact-1",
+    "summary": "V1 Update a Business Contactpatch"
+  },
+  {
+    "method": "GET",
+    "path": "/delete-contact-business",
+    "summary": "V1 Delete a Business Contactdel"
+  },
+  {
+    "method": "GET",
+    "path": "/get-note-business",
+    "summary": "V1 Get a Note for a Business Contactget"
+  },
+  {
+    "method": "GET",
+    "path": "/create-note-business",
+    "summary": "V1 Create Note for a Business Contactpost"
+  },
+  {
+    "method": "GET",
+    "path": "/update-note-business",
+    "summary": "V1 Update Note for a Business Contactpatch"
+  },
+  {
+    "method": "GET",
+    "path": "/delete-note-business",
+    "summary": "V1 Delete Note for a Business Contactdel"
+  },
+  {
+    "method": "GET",
+    "path": "/send-docs",
+    "summary": "Send Encompass Docs"
+  },
+  {
+    "method": "GET",
+    "path": "/contracts-send-encompass-docs",
+    "summary": "Contracts"
+  },
+  {
+    "method": "GET",
+    "path": "/manage-plan-codes",
+    "summary": "Manage Plan Codes"
+  },
+  {
+    "method": "GET",
+    "path": "/apply-plan-code",
+    "summary": "Apply Plan Codepost"
+  },
+  {
+    "method": "GET",
+    "path": "/view-plan-codes",
+    "summary": "Get Plan Codesget"
+  },
+  {
+    "method": "GET",
+    "path": "/audit-loan-file",
+    "summary": "Audit Loan File"
+  },
+  {
+    "method": "GET",
+    "path": "/audit-opening",
+    "summary": "Create Loan Audit for Opening Orderpost"
+  },
+  {
+    "method": "GET",
+    "path": "/audit-closing-loan-file",
+    "summary": "Create Loan Audit for Closing Orderpost"
+  },
+  {
+    "method": "GET",
+    "path": "/get-document-audit-to-remove-copy",
+    "summary": "Get Document Audit for Opening Orderget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-document-audit-to-remove-copy-copy",
+    "summary": "Get Document Audit for Closing Orderget"
+  },
+  {
+    "method": "GET",
+    "path": "/generate-package",
+    "summary": "Generate Document Package"
+  },
+  {
+    "method": "GET",
+    "path": "/generate-opening-doc-set",
+    "summary": "Generate Opening Doc Setpost"
+  },
+  {
+    "method": "GET",
+    "path": "/generate-closing-doc-set",
+    "summary": "Generate Closing Doc Setpost"
+  },
+  {
+    "method": "GET",
+    "path": "/generate-forms",
+    "summary": "Generate Formspost"
+  },
+  {
+    "method": "GET",
+    "path": "/get-order-status",
+    "summary": "Get Opening Order Statusget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-closing-order-status",
+    "summary": "Get Closing Order Statusget"
+  },
+  {
+    "method": "GET",
+    "path": "/append-documents-to-opening-doc-set",
+    "summary": "Add Documents to a Package"
+  },
+  {
+    "method": "GET",
+    "path": "/add-docs-to-opening-doc-set",
+    "summary": "Add to Opening Doc Setpost"
+  },
+  {
+    "method": "GET",
+    "path": "/get-docs-to-opening-doc-set",
+    "summary": "Get Opening Doc Setget"
+  },
+  {
+    "method": "GET",
+    "path": "/add-docs-to-closing-doc-set",
+    "summary": "Add to Closing Doc Setpost"
+  },
+  {
+    "method": "GET",
+    "path": "/get-docs-added-to-closing-doc-set",
+    "summary": "Get Closing Doc Setget"
+  },
+  {
+    "method": "GET",
+    "path": "/send-documents-order",
+    "summary": "Send Document Package"
+  },
+  {
+    "method": "GET",
+    "path": "/send-initial-disclosures",
+    "summary": "Send Opening Packagepost"
+  },
+  {
+    "method": "GET",
+    "path": "/send-closing-docs",
+    "summary": "Send Closing Packagepost"
+  },
+  {
+    "method": "GET",
+    "path": "/send-forms",
+    "summary": "Send Formspost"
+  },
+  {
+    "method": "GET",
+    "path": "/get-delivery-details",
+    "summary": "Get Opening Package Delivery Detailsget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-closing-package-delivery-details",
+    "summary": "Get Closing Package Delivery Detailsget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-forms-delivery-details",
+    "summary": "Get Forms Delivery Detailsget"
+  },
+  {
+    "method": "GET",
+    "path": "/print-or-preview-forms",
+    "summary": "Print on Demand"
+  },
+  {
+    "method": "GET",
+    "path": "/print-forms",
+    "summary": "Generate a Print Orderpost"
+  },
+  {
+    "method": "GET",
+    "path": "/223-get-print-job-url",
+    "summary": "Get a Print Orderget"
+  },
+  {
+    "method": "GET",
+    "path": "/loan-associates-milestones",
+    "summary": "Associates & Milestones"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-contracts-milestone",
+    "summary": "V3 Contracts"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-milestone-logs-list",
+    "summary": "V3 Get Milestone Logs Listget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-milestone-log",
+    "summary": "V3 Get Milestone Logget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-update-milestone-log",
+    "summary": "V3 Update Milestone Logpatch"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-milestonefree-role-list",
+    "summary": "V3 Get Milestone Free Role Listget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-update-milestone-free-role",
+    "summary": "V3 Update Milestone Free Rolepatch"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-update-milestone-dates",
+    "summary": "V3 Update Milestone Datespatch"
+  },
+  {
+    "method": "GET",
+    "path": "/v1-contracts-6",
+    "summary": "V1 Contracts"
+  },
+  {
+    "method": "GET",
+    "path": "/get-associates",
+    "summary": "V1 Get List of Associatesget"
+  },
+  {
+    "method": "GET",
+    "path": "/assign-loan-associate",
+    "summary": "V1 Assign a Loan Associateput"
+  },
+  {
+    "method": "GET",
+    "path": "/get-all-milestones",
+    "summary": "V1 Get All Milestonesget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-milestone-free-roles",
+    "summary": "V1 Get All Milestone Free Rolesget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-associate",
+    "summary": "V1 Get an Associateget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-a-milestone",
+    "summary": "V1 Get a Milestoneget"
+  },
+  {
+    "method": "GET",
+    "path": "/update-a-milestone",
+    "summary": "V1 Update a Milestonepatch"
+  },
+  {
+    "method": "GET",
+    "path": "/get-milestone-free-role",
+    "summary": "V1 Get a Milestone Free Roleget"
+  },
+  {
+    "method": "GET",
+    "path": "/update-a-milestone-free-role",
+    "summary": "V1 Update a Milestone-Free Rolepatch"
+  },
+  {
+    "method": "GET",
+    "path": "/pull-field-audit-data",
+    "summary": "Audit Trail"
+  },
+  {
+    "method": "GET",
+    "path": "/pull-field-audit-data",
+    "summary": "V3 Pull Loan Field Audit Datapost"
+  },
+  {
+    "method": "GET",
+    "path": "/loan-borrower-pair",
+    "summary": "Borrower Pair"
+  },
+  {
+    "method": "GET",
+    "path": "/v1-contracts-3",
+    "summary": "V1 Contracts"
+  },
+  {
+    "method": "GET",
+    "path": "/get-borrower-pairs",
+    "summary": "V1 Get All Borrower Pairsget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-borrower-pair",
+    "summary": "V1 Get a Borrower Pairget"
+  },
+  {
+    "method": "GET",
+    "path": "/create-borrower-pair",
+    "summary": "V1 Create Borrower Pairpost"
+  },
+  {
+    "method": "GET",
+    "path": "/update-borrower-pair",
+    "summary": "V1 Update Borrower Pairpatch"
+  },
+  {
+    "method": "GET",
+    "path": "/delete-borrower-pair",
+    "summary": "V1 Delete Borrower Pairdel"
+  },
+  {
+    "method": "GET",
+    "path": "/move-borrower-pair",
+    "summary": "V1 Move Borrower Pairpatch"
+  },
+  {
+    "method": "GET",
+    "path": "/borrower-vesting",
+    "summary": "Borrower Vesting"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-contracts-1",
+    "summary": "V3 Contracts"
+  },
+  {
+    "method": "GET",
+    "path": "/view-vesting-entities",
+    "summary": "V3 View Vesting Entitiesget"
+  },
+  {
+    "method": "GET",
+    "path": "/manage-vesting-entities",
+    "summary": "V3 Manage Vesting Entitiespatch"
+  },
+  {
+    "method": "GET",
+    "path": "/batch-update",
+    "summary": "Batch Update"
+  },
+  {
+    "method": "GET",
+    "path": "/get-status",
+    "summary": "V1 Get Statusget"
+  },
+  {
+    "method": "GET",
+    "path": "/update-loans",
+    "summary": "V1 Update Loanspost"
+  },
+  {
+    "method": "GET",
+    "path": "/calculators",
+    "summary": "Calculators"
+  },
+  {
+    "method": "GET",
+    "path": "/tools-transient-calculator",
+    "summary": "Loan Calculations"
+  },
+  {
+    "method": "GET",
+    "path": "/v1-contracts-15",
+    "summary": "V1 Contracts"
+  },
+  {
+    "method": "GET",
+    "path": "/calculate-loan",
+    "summary": "V1 Calculate Loanpost"
+  },
+  {
+    "method": "GET",
+    "path": "/print-form-calculators",
+    "summary": "Print Form Calculators"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-contracts-std-print-form-calc",
+    "summary": "V3 Contracts"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-list-standard-print-forms-loan",
+    "summary": "V3 Generate List of Standard Print Forms for a Loanpost"
+  },
+  {
+    "method": "GET",
+    "path": "/compliance-calculator",
+    "summary": "Compliance Calculator"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-contracts-compliance-calc",
+    "summary": "V3 Contracts"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-compliance-calendar-date-calc",
+    "summary": "V3 Compliance Calendar Date Calculatorpost"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-contracts-disaster-collection",
+    "summary": "Disasters Collection"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-contracts-disaster-collection",
+    "summary": "V3 Contracts"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-disasters",
+    "summary": "V3 Get Disastersget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-manage-disasters",
+    "summary": "V3 Manage Disasterspatch"
+  },
+  {
+    "method": "GET",
+    "path": "/efolder-document-1",
+    "summary": "eFolder Documents"
+  },
+  {
+    "method": "GET",
+    "path": "/contract-attributes-v3-3",
+    "summary": "V3 Contracts"
+  },
+  {
+    "method": "GET",
+    "path": "/get-list-of-documents",
+    "summary": "V3 Get List of Documentsget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-a-document-1",
+    "summary": "V3 Get a Documentget"
+  },
+  {
+    "method": "GET",
+    "path": "/manage-documents-1",
+    "summary": "V3 Manage Documentspatch"
+  },
+  {
+    "method": "GET",
+    "path": "/assign-document-attachments",
+    "summary": "V3 Assign Document Attachmentspatch"
+  },
+  {
+    "method": "GET",
+    "path": "/add-comments-to-a-document",
+    "summary": "V3 Add Comments to a Documentpatch"
+  },
+  {
+    "method": "GET",
+    "path": "/contract-attributes-v1-2",
+    "summary": "V1 Contract"
+  },
+  {
+    "method": "GET",
+    "path": "/get-documents",
+    "summary": "V1 Get List of Documentsget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-document",
+    "summary": "V1 Get a Documentget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-document-attachments",
+    "summary": "V1 Get Document Attachmentsget"
+  },
+  {
+    "method": "GET",
+    "path": "/create-document",
+    "summary": "V1 Create Documentpost"
+  },
+  {
+    "method": "GET",
+    "path": "/update-document",
+    "summary": "V1 Update Documentpatch"
+  },
+  {
+    "method": "GET",
+    "path": "/assign-document-attachment",
+    "summary": "V1 Assign Document Attachmentspatch"
+  },
+  {
+    "method": "GET",
+    "path": "/efolder-attachment-1",
+    "summary": "eFolder Attachments"
+  },
+  {
+    "method": "GET",
+    "path": "/contract-attributes-v3-4",
+    "summary": "V3 Contracts"
+  },
+  {
+    "method": "GET",
+    "path": "/get-list-of-attachments",
+    "summary": "V3 Get List of Attachmentsget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-an-attachment",
+    "summary": "V3 Get an Attachmentget"
+  },
+  {
+    "method": "GET",
+    "path": "/update-or-remove-attachments",
+    "summary": "V3 Update or Remove Attachmentspatch"
+  },
+  {
+    "method": "GET",
+    "path": "/create-attachment-url",
+    "summary": "V3 Create Attachment URLpost"
+  },
+  {
+    "method": "GET",
+    "path": "/get-download-attachment-url",
+    "summary": "V3 Get Download Attachment URLpost"
+  },
+  {
+    "method": "GET",
+    "path": "/contract-attributes-v1-3",
+    "summary": "V1 Contracts"
+  },
+  {
+    "method": "GET",
+    "path": "/get-attachments",
+    "summary": "V1 Get List of Attachmentsget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-attachment",
+    "summary": "V1 Get an Attachmentget"
+  },
+  {
+    "method": "GET",
+    "path": "/v1-get-attachment-metadata",
+    "summary": "V1 Get Attachment Metadataget"
+  },
+  {
+    "method": "GET",
+    "path": "/upload-attachment-to-efolder",
+    "summary": "V1 Upload Attachment to eFolderput"
+  },
+  {
+    "method": "GET",
+    "path": "/get-attachment-url",
+    "summary": "V1 Get Attachment from eFolderpost"
+  },
+  {
+    "method": "GET",
+    "path": "/get-thumbnail-of-page",
+    "summary": "V1 Get Thumbnail of Pagepost"
+  },
+  {
+    "method": "GET",
+    "path": "/get-page-of-attachment",
+    "summary": "V1 Get Page of Attachmentpost"
+  },
+  {
+    "method": "GET",
+    "path": "/update-attachment",
+    "summary": "V1 Update Attachmentpatch"
+  },
+  {
+    "method": "GET",
+    "path": "/contracts-2",
+    "summary": "eFolder Export Attachments"
+  },
+  {
+    "method": "GET",
+    "path": "/contracts-2",
+    "summary": "Contracts"
+  },
+  {
+    "method": "GET",
+    "path": "/get-export-status",
+    "summary": "Get Export Statusget"
+  },
+  {
+    "method": "GET",
+    "path": "/export-attachments",
+    "summary": "Export Attachmentspost"
+  },
+  {
+    "method": "GET",
+    "path": "/export-files-job-creator",
+    "summary": "Export Files Job Creatorpost"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-efolder-history",
+    "summary": "eFolder History"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-efolder-history",
+    "summary": "V3 Get eFolder Historyget"
+  },
+  {
+    "method": "GET",
+    "path": "/import-loan-from-file",
+    "summary": "Import from File"
+  },
+  {
+    "method": "GET",
+    "path": "/converter-to-import-new-loan",
+    "summary": "V3 Converter to Import New Loanpost"
+  },
+  {
+    "method": "GET",
+    "path": "/importer-to-update-loan",
+    "summary": "V3 Importer to Update Loanpost"
+  },
+  {
+    "method": "GET",
+    "path": "/create-loan-from-import-file",
+    "summary": "V1 Loan Importer to Create Loanpost"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-contracts",
+    "summary": "Loan Contacts"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-contracts",
+    "summary": "V3 Contracts"
+  },
+  {
+    "method": "GET",
+    "path": "/get-affiliated-business-arrangements",
+    "summary": "V3 Get Affiliated Business Arrangementsget"
+  },
+  {
+    "method": "GET",
+    "path": "/manage-affiliated-business-arrangements",
+    "summary": "V3 Manage Affiliated Business Arrangementspatch"
+  },
+  {
+    "method": "GET",
+    "path": "/manage-service-provider-contacts-list",
+    "summary": "V3 Manage Service Provider Contacts Listpatch"
+  },
+  {
+    "method": "GET",
+    "path": "/get-service-provider-contacts",
+    "summary": "V3 Get Service Provider Contactsget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-homecounselingprovider",
+    "summary": "V3 Get Home Counseling Providerget"
+  },
+  {
+    "method": "GET",
+    "path": "/manage-home-counseling-providers-list",
+    "summary": "V3 Manage Home Counseling Providers Listpatch"
+  },
+  {
+    "method": "GET",
+    "path": "/loan-conditions",
+    "summary": "Loan Conditions"
+  },
+  {
+    "method": "GET",
+    "path": "/v1-contracts-8",
+    "summary": "V1 Contracts"
+  },
+  {
+    "method": "GET",
+    "path": "/get-an-underwriting-condition",
+    "summary": "V1 Get an Underwriting Conditionget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-all-underwriting-conditions",
+    "summary": "V1 Get All Underwriting Conditionsget"
+  },
+  {
+    "method": "GET",
+    "path": "/create-underwriting-conditions",
+    "summary": "V1 Create Underwriting Conditionspost"
+  },
+  {
+    "method": "GET",
+    "path": "/manage-underwriting-conditions",
+    "summary": "V1 Manage Underwriting Conditionspatch"
+  },
+  {
+    "method": "GET",
+    "path": "/manage-underwriting-comments",
+    "summary": "V1 Manage Underwriting Commentspatch"
+  },
+  {
+    "method": "GET",
+    "path": "/manage-underwriting-documents",
+    "summary": "V1 Manage Underwriting Documentspatch"
+  },
+  {
+    "method": "GET",
+    "path": "/get-all-preliminary-conditions-1",
+    "summary": "V1 Get All Preliminary Conditionsget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-all-preliminary-conditions",
+    "summary": "V1 Get a Preliminary Conditionget"
+  },
+  {
+    "method": "GET",
+    "path": "/create-preliminary-conditions",
+    "summary": "V1 Create Preliminary Conditionspost"
+  },
+  {
+    "method": "GET",
+    "path": "/manage-preliminary-conditions",
+    "summary": "V1 Manage Preliminary Conditionspatch"
+  },
+  {
+    "method": "GET",
+    "path": "/manage-preliminary-comments",
+    "summary": "V1 Manage Preliminary Commentspatch"
+  },
+  {
+    "method": "GET",
+    "path": "/manage-preliminary-documents",
+    "summary": "V1 Manage Preliminary Documentspatch"
+  },
+  {
+    "method": "GET",
+    "path": "/get-all-post-closing-conditions",
+    "summary": "V1 Get All Post-Closing Conditionsget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-a-post-closing-condition",
+    "summary": "V1 Get a Post-Closing Conditionget"
+  },
+  {
+    "method": "GET",
+    "path": "/create-post-closing-conditions",
+    "summary": "V1 Create Post-Closing Conditionspost"
+  },
+  {
+    "method": "GET",
+    "path": "/manage-post-closing-conditions",
+    "summary": "V1 Manage Post-Closing Conditionspatch"
+  },
+  {
+    "method": "GET",
+    "path": "/manage-post-closing-comments",
+    "summary": "V1 Manage Post-Closing Commentspatch"
+  },
+  {
+    "method": "GET",
+    "path": "/manage-post-closing-documents",
+    "summary": "V1 Manage Post-Closing Documentspatch"
+  },
+  {
+    "method": "GET",
+    "path": "/loan-enhanced-conditions",
+    "summary": "Loan Enhanced Conditions"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-contracts-7",
+    "summary": "V3 Contracts"
+  },
+  {
+    "method": "GET",
+    "path": "/get-all-enhanced-conditions",
+    "summary": "V3 Get All Enhanced Conditionsget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-an-enhanced-condition",
+    "summary": "V3 Get an Enhanced Conditionget"
+  },
+  {
+    "method": "GET",
+    "path": "/manage-enhanced-conditions-1",
+    "summary": "V3 Manage Enhanced Conditionspatch"
+  },
+  {
+    "method": "GET",
+    "path": "/get-comments",
+    "summary": "V3 Get Commentsget"
+  },
+  {
+    "method": "GET",
+    "path": "/manage-comments",
+    "summary": "V3 Manage Commentspatch"
+  },
+  {
+    "method": "GET",
+    "path": "/get-documents-1",
+    "summary": "V3 Get Documentsget"
+  },
+  {
+    "method": "GET",
+    "path": "/manage-documents",
+    "summary": "V3 Manage Documentspatch"
+  },
+  {
+    "method": "GET",
+    "path": "/get-tracking-entries",
+    "summary": "V3 Get Tracking Entriesget"
+  },
+  {
+    "method": "GET",
+    "path": "/manage-tracking-entries",
+    "summary": "V3 Manage Tracking Entriespatch"
+  },
+  {
+    "method": "GET",
+    "path": "/loan-management",
+    "summary": "Loan Management"
+  },
+  {
+    "method": "GET",
+    "path": "/get-loan-1",
+    "summary": "V3 Get Loanget"
+  },
+  {
+    "method": "GET",
+    "path": "/create-loan-1",
+    "summary": "V3 Create Loanpost"
+  },
+  {
+    "method": "GET",
+    "path": "/update-loan-1",
+    "summary": "V3 Update Loanpatch"
+  },
+  {
+    "method": "GET",
+    "path": "/delete-loan-1",
+    "summary": "V3 Delete Loandel"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-ucd-fields",
+    "summary": "V3 Get UCD Fieldsget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-loan",
+    "summary": "V1 Get Loanget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-supported-entities",
+    "summary": "V1 Get Supported Entitiesget"
+  },
+  {
+    "method": "GET",
+    "path": "/create-loan",
+    "summary": "V1 Create Loanpost"
+  },
+  {
+    "method": "GET",
+    "path": "/move-to-loan-folder",
+    "summary": "V1 Move Loan to Folderpatch"
+  },
+  {
+    "method": "GET",
+    "path": "/delete-loan",
+    "summary": "V1 Delete Loandel"
+  },
+  {
+    "method": "GET",
+    "path": "/update-loan",
+    "summary": "V1 Update Loanpatch"
+  },
+  {
+    "method": "GET",
+    "path": "/loan-management-reader-writer",
+    "summary": "Loan Management (Reader / Writer)"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-contracts-4",
+    "summary": "V3 Contracts"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-field-reader",
+    "summary": "V3 Field Readerpost"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-field-writer",
+    "summary": "V3 Field Writerpost"
+  },
+  {
+    "method": "GET",
+    "path": "/update-field-lock-data",
+    "summary": "V3 Update Field Lock Datapatch"
+  },
+  {
+    "method": "GET",
+    "path": "/v1-contracts",
+    "summary": "V1 Contracts"
+  },
+  {
+    "method": "GET",
+    "path": "/v1-field-reader",
+    "summary": "V1 Field Readerpost"
+  },
+  {
+    "method": "GET",
+    "path": "/loan-pipeline",
+    "summary": "Loan Pipeline"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-contract-attributes",
+    "summary": "V3 Contracts"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-create-cursor",
+    "summary": "V3 Loan Pipeline for Reportspost"
+  },
+  {
+    "method": "GET",
+    "path": "/view-pipeline-with-pagination-1",
+    "summary": "V3 Loan Pipeline (with Pagination)post"
+  },
+  {
+    "method": "GET",
+    "path": "/get-canonical-names",
+    "summary": "V3 Get Pipeline Canonical Namesget"
+  },
+  {
+    "method": "GET",
+    "path": "/v1-pipeline-contracts",
+    "summary": "V1 Contracts"
+  },
+  {
+    "method": "GET",
+    "path": "/v1-get-canonical-fields",
+    "summary": "V1 Get Pipeline Canonical Namesget"
+  },
+  {
+    "method": "GET",
+    "path": "/create-cursor",
+    "summary": "V1 Create Cursorpost"
+  },
+  {
+    "method": "GET",
+    "path": "/view-pipeline-with-pagination",
+    "summary": "V1 Loan Pipeline (with Pagination)post"
+  },
+  {
+    "method": "GET",
+    "path": "/view-pipeline",
+    "summary": "V1 Loan Pipelinepost"
+  },
+  {
+    "method": "GET",
+    "path": "/non-borrowing-owners",
+    "summary": "Non-Borrowing Owners"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-contracts-non-borrowing-owners",
+    "summary": "V3 Contracts"
+  },
+  {
+    "method": "GET",
+    "path": "/get-non-borrowing-owners",
+    "summary": "V3 Get Non-Borrowing Ownersget"
+  },
+  {
+    "method": "GET",
+    "path": "/manage-non-borrowing-owners",
+    "summary": "V3 Manage Non-Borrowing Ownerspatch"
+  },
+  {
+    "method": "GET",
+    "path": "/rate-lock-management",
+    "summary": "Rate Lock"
+  },
+  {
+    "method": "GET",
+    "path": "/v1-contracts-2",
+    "summary": "V1 Contracts"
+  },
+  {
+    "method": "GET",
+    "path": "/get-rate-lock",
+    "summary": "V1 Get All Rate Lock Requestsget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-rate-lock-request",
+    "summary": "V1 Get a Rate Lock Requestget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-snapshot-of-a-rate-lock",
+    "summary": "V1 Get Snapshot of a Rate Lock Requestget"
+  },
+  {
+    "method": "GET",
+    "path": "/submit-a-rate-lock-request",
+    "summary": "V1 Submit a Rate Lock Requestpost"
+  },
+  {
+    "method": "GET",
+    "path": "/update-a-rate-lock-request",
+    "summary": "V1 Update a Rate Lock Requestpatch"
+  },
+  {
+    "method": "GET",
+    "path": "/confirm-a-rate-lock-request",
+    "summary": "V1 Confirm a Rate Lock Requestput"
+  },
+  {
+    "method": "GET",
+    "path": "/cancel-lock-request",
+    "summary": "V1 Cancel Lock Requestput"
+  },
+  {
+    "method": "GET",
+    "path": "/deny-a-rate-lock-request",
+    "summary": "V1 Deny a Rate Lock Requestput"
+  },
+  {
+    "method": "GET",
+    "path": "/void-a-rate-lock-request",
+    "summary": "V1 Void a Rate Lock Requestput"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-contracts-8",
+    "summary": "Recipients"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-contracts-8",
+    "summary": "V3 Contracts"
+  },
+  {
+    "method": "GET",
+    "path": "/get-recipients",
+    "summary": "V3 Get Recipientsget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-contracts-3",
+    "summary": "URLA Alternate Names"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-contracts-3",
+    "summary": "V3 Contracts"
+  },
+  {
+    "method": "GET",
+    "path": "/get-urla-alternate-names",
+    "summary": "V3 Get URLA Alternate Namesget"
+  },
+  {
+    "method": "GET",
+    "path": "/update-urla-version",
+    "summary": "V3 Update URLA Versionpatch"
+  },
+  {
+    "method": "GET",
+    "path": "/update-urla-alternate-names",
+    "summary": "V3 Update URLA Alternate Namespatch"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-funding-fees",
+    "summary": "Manage Funding Fees"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-funding-fees",
+    "summary": "V3 Get Funding Feesget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-patch-funding-balances",
+    "summary": "V3 Update Funding Balancespatch"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-funding-balances",
+    "summary": "Manage Funding Balances"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-funding-balances",
+    "summary": "V3 Get Funding Balancesget"
+  },
+  {
+    "method": "GET",
+    "path": "/loan-disclosure-tracking-2015",
+    "summary": "Disclosure Tracking (2015)"
+  },
+  {
+    "method": "GET",
+    "path": "/get-a-list-of-disclosure-tracking-logs",
+    "summary": "V3 Get a List of Disclosure Tracking Logsget"
+  },
+  {
+    "method": "GET",
+    "path": "/add-a-disclosure-tracking-log",
+    "summary": "V3 Add a Disclosure Tracking Logpost"
+  },
+  {
+    "method": "GET",
+    "path": "/get-a-disclosure-tracking-log-1",
+    "summary": "V3 Get a Disclosure Tracking Logget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-disclosure-tracking-log-email-messages",
+    "summary": "V3 Get Disclosure Tracking Log Email Messagesget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-dt-snapshots",
+    "summary": "V3 Get Disclosure Tracking Snapshotsget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-dt-snapshot",
+    "summary": "V3 Get Disclosure Tracking Snapshotget"
+  },
+  {
+    "method": "GET",
+    "path": "/update-a-disclosure-tracking-log",
+    "summary": "V3 Update a Disclosure Tracking Logpatch"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-add-manual-fulfillment",
+    "summary": "V3 Add Manual Fulfillmentpost"
+  },
+  {
+    "method": "GET",
+    "path": "/get-all-disclosure-tracking-logs",
+    "summary": "V1 Get a List of Disclosure Tracking Logsget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-a-disclosure-tracking-log",
+    "summary": "V1 Get a Disclosure Tracking Logget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-snapshot",
+    "summary": "V1 Get Snapshotget"
+  },
+  {
+    "method": "GET",
+    "path": "/loan-metadata",
+    "summary": "Loan Metadata"
+  },
+  {
+    "method": "GET",
+    "path": "/v1-get-loan-metadata",
+    "summary": "V1 Get Loan Metadataget"
+  },
+  {
+    "method": "GET",
+    "path": "/aus-tracking",
+    "summary": "AUS Tracking"
+  },
+  {
+    "method": "GET",
+    "path": "/get-all-aus-tracking-log",
+    "summary": "V1 Get All AUS Tracking Logsget"
+  },
+  {
+    "method": "GET",
+    "path": "/create-an-aus-tracking-log",
+    "summary": "V1 Create an AUS Tracking Logpost"
+  },
+  {
+    "method": "GET",
+    "path": "/get-an-aus-tracking-log",
+    "summary": "V1 Get an AUS Tracking Logget"
+  },
+  {
+    "method": "GET",
+    "path": "/update-an-aus-tracking-log",
+    "summary": "V1 Update an AUS Tracking Logpatch"
+  },
+  {
+    "method": "GET",
+    "path": "/get-aus-tracking-log-snapshot",
+    "summary": "V1 Get AUS Tracking Log Snapshotget"
+  },
+  {
+    "method": "GET",
+    "path": "/loan-conversation-log-1",
+    "summary": "Conversation Log"
+  },
+  {
+    "method": "GET",
+    "path": "/create-conversation-log",
+    "summary": "V3 Create Conversation Logpatch"
+  },
+  {
+    "method": "GET",
+    "path": "/get-all-conversation-logs",
+    "summary": "V1 Get All Conversation Logsget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-a-conversation-log",
+    "summary": "V1 Get a Conversation Logget"
+  },
+  {
+    "method": "GET",
+    "path": "/loan-registration-logs",
+    "summary": "Registration Logs"
+  },
+  {
+    "method": "GET",
+    "path": "/get-registration-logs",
+    "summary": "V3 Get Registration Logsget"
+  },
+  {
+    "method": "GET",
+    "path": "/create-registration-log",
+    "summary": "V3 Create Registration Logpost"
+  },
+  {
+    "method": "GET",
+    "path": "/get-a-registration-log",
+    "summary": "V3 Get a Registration Logget"
+  },
+  {
+    "method": "GET",
+    "path": "/update-registration-log",
+    "summary": "V3 Update Registration Logpatch"
+  },
+  {
+    "method": "GET",
+    "path": "/get-vods",
+    "summary": "Verification Input Forms"
+  },
+  {
+    "method": "GET",
+    "path": "/get-vods",
+    "summary": "V3 Get VODsget"
+  },
+  {
+    "method": "GET",
+    "path": "/manage-vods",
+    "summary": "V3 Manage VODspatch"
+  },
+  {
+    "method": "GET",
+    "path": "/get-non-vols",
+    "summary": "V3 Get non-VOLsget"
+  },
+  {
+    "method": "GET",
+    "path": "/manage-non-vols",
+    "summary": "V3 Manage non-VOLspatch"
+  },
+  {
+    "method": "GET",
+    "path": "/get-employment",
+    "summary": "V3 Get Employmentget"
+  },
+  {
+    "method": "GET",
+    "path": "/manage-employment",
+    "summary": "V3 Manage Employmentpatch"
+  },
+  {
+    "method": "GET",
+    "path": "/get-residences",
+    "summary": "V3 Get Residencesget"
+  },
+  {
+    "method": "GET",
+    "path": "/manage-residences",
+    "summary": "V3 Manage Residencespatch"
+  },
+  {
+    "method": "GET",
+    "path": "/get-additional-loans",
+    "summary": "V3 Get Additional Loansget"
+  },
+  {
+    "method": "GET",
+    "path": "/manage-additional-loans",
+    "summary": "V3 Manage Additional Loanspatch"
+  },
+  {
+    "method": "GET",
+    "path": "/get-vols",
+    "summary": "V3 Get VOLsget"
+  },
+  {
+    "method": "GET",
+    "path": "/manage-vols",
+    "summary": "V3 Manage VOLspatch"
+  },
+  {
+    "method": "GET",
+    "path": "/get-other-income",
+    "summary": "Assets"
+  },
+  {
+    "method": "GET",
+    "path": "/get-other-income",
+    "summary": "V3 Get Other Incomeget"
+  },
+  {
+    "method": "GET",
+    "path": "/manage-other-incomes",
+    "summary": "V3 Manage Other Incomespatch"
+  },
+  {
+    "method": "GET",
+    "path": "/get-other-assets",
+    "summary": "V3 Get Other Assetsget"
+  },
+  {
+    "method": "GET",
+    "path": "/manage-other-assets",
+    "summary": "V3 Manage Other Assetspatch"
+  },
+  {
+    "method": "GET",
+    "path": "/get-gifts-and-grants",
+    "summary": "V3 Get Gifts and Grantsget"
+  },
+  {
+    "method": "GET",
+    "path": "/manage-gifts-and-grants",
+    "summary": "V3 Manage Gifts and Grantspatch"
+  },
+  {
+    "method": "GET",
+    "path": "/get-reo-properties",
+    "summary": "V3 Get REO Propertiesget"
+  },
+  {
+    "method": "GET",
+    "path": "/manage-reo-properties",
+    "summary": "V3 Manage REO Propertiespatch"
+  },
+  {
+    "method": "GET",
+    "path": "/get-other-liabilities",
+    "summary": "Liabilities"
+  },
+  {
+    "method": "GET",
+    "path": "/get-other-liabilities",
+    "summary": "V3 Get Other Liabilitiesget"
+  },
+  {
+    "method": "GET",
+    "path": "/manage-other-liabilities",
+    "summary": "V3 Manage Other Liabilitiespatch"
+  },
+  {
+    "method": "GET",
+    "path": "/loan-lock-1",
+    "summary": "Loan Resource Lock"
+  },
+  {
+    "method": "GET",
+    "path": "/get-list-of-resource-locks",
+    "summary": "V3 Get List of Resource Locksget"
+  },
+  {
+    "method": "GET",
+    "path": "/lock-resource-1",
+    "summary": "V3 Lock Resourcepost"
+  },
+  {
+    "method": "GET",
+    "path": "/get-a-resource-lock",
+    "summary": "V3 Get a Resource Lockget"
+  },
+  {
+    "method": "GET",
+    "path": "/unlock-resource-1",
+    "summary": "V3 Unlock Resourcedel"
+  },
+  {
+    "method": "GET",
+    "path": "/get-resource-locks",
+    "summary": "V1 Get List of Resource Locksget"
+  },
+  {
+    "method": "GET",
+    "path": "/lock-resource",
+    "summary": "V1 Lock Resourcepost"
+  },
+  {
+    "method": "GET",
+    "path": "/get-resource-lock",
+    "summary": "V1 Get a Resource Lockget"
+  },
+  {
+    "method": "GET",
+    "path": "/unlock-resource",
+    "summary": "V1 Unlock Resourcedel"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-request-for-transcript-of-tax",
+    "summary": "Request for Transcript of Tax"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-request-for-transcript-of-tax",
+    "summary": "Preview: V3 Get Request for Transcript of Taxget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-patch-request-for-transcript-of-tax",
+    "summary": "V3 Update Request for Transcript of Taxpatch"
+  },
+  {
+    "method": "GET",
+    "path": "/loan-schema",
+    "summary": "Schema"
+  },
+  {
+    "method": "GET",
+    "path": "/contract-attributes-v3-2",
+    "summary": "V3 Contracts"
+  },
+  {
+    "method": "GET",
+    "path": "/get-loan-schema-1",
+    "summary": "V3 Get Loan Schemaget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-field-schema-1",
+    "summary": "V3 Get Field Schemaget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-virtual-fields",
+    "summary": "V3 Get Virtual Fieldsget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-loan-schema",
+    "summary": "V1 Get Loan Schemaget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-field-schema",
+    "summary": "V1 Get Field Schemaget"
+  },
+  {
+    "method": "GET",
+    "path": "/path-generator",
+    "summary": "V1 Path Generatorpost"
+  },
+  {
+    "method": "GET",
+    "path": "/contract-generator",
+    "summary": "V1 Contract Generatorpost"
+  },
+  {
+    "method": "GET",
+    "path": "/correspondent-trades",
+    "summary": "Correspondent Trades"
+  },
+  {
+    "method": "GET",
+    "path": "/trade-pipeline",
+    "summary": "Trade Pipeline"
+  },
+  {
+    "method": "GET",
+    "path": "/contracts-10",
+    "summary": "Contracts"
+  },
+  {
+    "method": "GET",
+    "path": "/get-trade-pipeline-of-correspondent-trade",
+    "summary": "Get Trade Pipelinepost"
+  },
+  {
+    "method": "GET",
+    "path": "/get-field-definitions",
+    "summary": "Get Field Definitionsget"
+  },
+  {
+    "method": "GET",
+    "path": "/trade-management",
+    "summary": "Trade Management"
+  },
+  {
+    "method": "GET",
+    "path": "/create-a-correspondent-trade",
+    "summary": "Create a Correspondent Tradepost"
+  },
+  {
+    "method": "GET",
+    "path": "/get-correspondent-trade",
+    "summary": "Get Correspondent Tradeget"
+  },
+  {
+    "method": "GET",
+    "path": "/update-a-correspondent-trade",
+    "summary": "Update a Correspondent Tradepatch"
+  },
+  {
+    "method": "GET",
+    "path": "/get-event-history",
+    "summary": "Get Event Historyget"
+  },
+  {
+    "method": "GET",
+    "path": "/assign-loans-to-correspondent-trade",
+    "summary": "Assign Loans to Correspondent Tradeput"
+  },
+  {
+    "method": "GET",
+    "path": "/delete-correspondent-trade",
+    "summary": "Unassign Loans From a Correspondent Tradedel"
+  },
+  {
+    "method": "GET",
+    "path": "/get-correspondent-trade-notes",
+    "summary": "Get Notesget"
+  },
+  {
+    "method": "GET",
+    "path": "/create-trade-note",
+    "summary": "Create a Noteput"
+  },
+  {
+    "method": "GET",
+    "path": "/update-a-note",
+    "summary": "Manage a Notepatch"
+  },
+  {
+    "method": "GET",
+    "path": "/get-correspondent-trade-statistics",
+    "summary": "Get Correspondent Trade Statisticsget"
+  },
+  {
+    "method": "GET",
+    "path": "/extend-a-correspondent-trade",
+    "summary": "Extend a Correspondent Tradeput"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-create-pipeline-view",
+    "summary": "Loan Pipeline Views"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-create-pipeline-view",
+    "summary": "Preview: V3 Create Pipeline Viewpost"
+  },
+  {
+    "method": "GET",
+    "path": "/update-pipeline-view",
+    "summary": "Preview: V3 Update Pipeline Viewpatch"
+  },
+  {
+    "method": "GET",
+    "path": "/service-orders",
+    "summary": "Service Orders"
+  },
+  {
+    "method": "GET",
+    "path": "/credit-partners-and-samples",
+    "summary": "Credit Partners and Supported Products"
+  },
+  {
+    "method": "GET",
+    "path": "/retrieve-raw-xml-files",
+    "summary": "Retrieve Raw XML Files"
+  },
+  {
+    "method": "GET",
+    "path": "/aus-partners-and-samples",
+    "summary": "AUS Providers and Samples"
+  },
+  {
+    "method": "GET",
+    "path": "/freddie-mac-affordable-check-api",
+    "summary": "Freddie Mac Affordable Check API"
+  },
+  {
+    "method": "GET",
+    "path": "/freddie-mac-datashare-apis",
+    "summary": "Freddie Mac Datashare APIs"
+  },
+  {
+    "method": "GET",
+    "path": "/order-services",
+    "summary": "Order Servicespost"
+  },
+  {
+    "method": "GET",
+    "path": "/get-service-order-status",
+    "summary": "Get Service Order Statusget"
+  },
+  {
+    "method": "GET",
+    "path": "/overview-2",
+    "summary": "Overview"
+  },
+  {
+    "method": "GET",
+    "path": "/get-user-mapping-1",
+    "summary": "User Management"
+  },
+  {
+    "method": "GET",
+    "path": "/get-user-mapping-1",
+    "summary": "Get User Mappingget"
+  },
+  {
+    "method": "GET",
+    "path": "/map-epps-user",
+    "summary": "Map ICE PPE Userpatch"
+  },
+  {
+    "method": "GET",
+    "path": "/get-programs-and-rates",
+    "summary": "Rates"
+  },
+  {
+    "method": "GET",
+    "path": "/get-programs-and-rates",
+    "summary": "Get Programs and Ratespost"
+  },
+  {
+    "method": "GET",
+    "path": "/v2-get-eligible-rates",
+    "summary": "Get Eligible Ratespost"
+  },
+  {
+    "method": "GET",
+    "path": "/select-rate",
+    "summary": "Select Ratepost"
+  },
+  {
+    "method": "GET",
+    "path": "/get-adjustments-1",
+    "summary": "Get Adjustmentspost"
+  },
+  {
+    "method": "GET",
+    "path": "/get-guidelines",
+    "summary": "Guidelines"
+  },
+  {
+    "method": "GET",
+    "path": "/get-guidelines",
+    "summary": "Get Guideline Detailsget"
+  },
+  {
+    "method": "GET",
+    "path": "/agency-approvals",
+    "summary": "Lookups"
+  },
+  {
+    "method": "GET",
+    "path": "/agency-approvals",
+    "summary": "Get Agency Approvalsget"
+  },
+  {
+    "method": "GET",
+    "path": "/bankruptcy",
+    "summary": "Get Bankruptcyget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-buydown-type",
+    "summary": "Get Buydown Typeget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-buydown-contributor-type",
+    "summary": "Get Buydown Contributor Typeget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-citizenship",
+    "summary": "Get Citizenshipget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-client-settings",
+    "summary": "Get Client Settingsget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-commitment-types",
+    "summary": "Get Commitment Typesget"
+  },
+  {
+    "method": "GET",
+    "path": "/counties",
+    "summary": "Get Countiesget"
+  },
+  {
+    "method": "GET",
+    "path": "/epps-get-custom-fields",
+    "summary": "Get Custom Fieldsget"
+  },
+  {
+    "method": "GET",
+    "path": "/delivery-types",
+    "summary": "Get Delivery Typesget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-documentation-types",
+    "summary": "Get Documentation Typesget"
+  },
+  {
+    "method": "GET",
+    "path": "/encompass-elements",
+    "summary": "Get Encompass Elementsget"
+  },
+  {
+    "method": "GET",
+    "path": "/foreclosure",
+    "summary": "Get Foreclosureget"
+  },
+  {
+    "method": "GET",
+    "path": "/investors",
+    "summary": "Get Investorsget"
+  },
+  {
+    "method": "GET",
+    "path": "/lien-position",
+    "summary": "Get Lien Positionget"
+  },
+  {
+    "method": "GET",
+    "path": "/loan-terms",
+    "summary": "Get Loan Termsget"
+  },
+  {
+    "method": "GET",
+    "path": "/loan-usage",
+    "summary": "Get Loan Usageget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-loan-limits",
+    "summary": "Get Loan Limitsget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-locations",
+    "summary": "Get Locationsget"
+  },
+  {
+    "method": "GET",
+    "path": "/lock-days",
+    "summary": "Get Lock Daysget"
+  },
+  {
+    "method": "GET",
+    "path": "/nod-types",
+    "summary": "NOD Typesget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-non-qm-doc-level",
+    "summary": "Get Non QM Doc Levelget"
+  },
+  {
+    "method": "GET",
+    "path": "/prepay-penalty-terms",
+    "summary": "Get Prepay Penalty Termsget"
+  },
+  {
+    "method": "GET",
+    "path": "/product-options",
+    "summary": "Get Product Optionsget"
+  },
+  {
+    "method": "GET",
+    "path": "/property-types",
+    "summary": "Get Property Typesget"
+  },
+  {
+    "method": "GET",
+    "path": "/property-use",
+    "summary": "Get Property Useget"
+  },
+  {
+    "method": "GET",
+    "path": "/special-products",
+    "summary": "Get Special Productsget"
+  },
+  {
+    "method": "GET",
+    "path": "/standard-products",
+    "summary": "Get Standard Productsget"
+  },
+  {
+    "method": "GET",
+    "path": "/states",
+    "summary": "Get Statesget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-unit-types",
+    "summary": "Get Unit Typesget"
+  },
+  {
+    "method": "GET",
+    "path": "/encompass-compliance-service-1",
+    "summary": "Encompass Compliance Service"
+  },
+  {
+    "method": "GET",
+    "path": "/create-a-compliance-report",
+    "summary": "Create Compliance Reportpost"
+  },
+  {
+    "method": "GET",
+    "path": "/get-compliance-reports",
+    "summary": "Get Compliance Reportget"
+  },
+  {
+    "method": "GET",
+    "path": "/settings-milestones",
+    "summary": "Milestones"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-list-milestones",
+    "summary": "V3 Get List of Milestonesget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-details-specific-milestone",
+    "summary": "V3 Get Details on Specific Milestoneget"
+  },
+  {
+    "method": "GET",
+    "path": "/settings",
+    "summary": "Organizations"
+  },
+  {
+    "method": "GET",
+    "path": "/get-root-organization-detail",
+    "summary": "V1 Get Root Organization Detailget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-all-organizations",
+    "summary": "V1 Get All Organizationsget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-organization-detail",
+    "summary": "V1 Get Organization Detailget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-children-of-organization",
+    "summary": "V1 Get Children of Organizationget"
+  },
+  {
+    "method": "GET",
+    "path": "/settings-personas",
+    "summary": "Personas"
+  },
+  {
+    "method": "GET",
+    "path": "/get-a-list-of-personas-1",
+    "summary": "V3 Get a List of Personasget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-a-persona-1",
+    "summary": "V3 Get a Personaget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-a-list-of-personas",
+    "summary": "V1 Get a List of Personasget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-a-persona",
+    "summary": "V1 Get a Specific Personaget"
+  },
+  {
+    "method": "GET",
+    "path": "/roles",
+    "summary": "Roles"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-list-of-roles",
+    "summary": "V3 Get List of Rolesget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-specific-role-details",
+    "summary": "V3 Get Specific Role Detailsget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-role-mappings",
+    "summary": "V3 Get Role Mappingsget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-a-list-of-roles",
+    "summary": "V1 Get a List of Rolesget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-borrower-canonical-names",
+    "summary": "Borrower Contacts"
+  },
+  {
+    "method": "GET",
+    "path": "/get-borrower-canonical-names",
+    "summary": "V1 Get Borrower Canonical Namesget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-business-canonical-names",
+    "summary": "Business Contacts"
+  },
+  {
+    "method": "GET",
+    "path": "/get-business-canonical-names",
+    "summary": "V1 Get Business Contact Canonical Namesget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-bus-contacts-custom-fields",
+    "summary": "V3 Get Business Contacts Custom Fieldsget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-bus-contacts-categories",
+    "summary": "V3 Get Business Contacts Categoriesget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-bus-contacts-custom-cat-fields",
+    "summary": "V3 Get Business Contacts Category Fieldsget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-efolder-document-settings",
+    "summary": "eFolder Setup"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-efolder-document-settings",
+    "summary": "V3 Get eFolder Document Settingsget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-efolder-document-options",
+    "summary": "V3 Get eFolder Document Optionsget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-list-efolder-doc-stacking-templates",
+    "summary": "V3 Get List of eFolder Document Stacking Templatesget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-efolder-doc-stacking-template-details",
+    "summary": "V3 Get eFolder Document Stacking Template Detailsget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-external-organizations",
+    "summary": "Company Details"
+  },
+  {
+    "method": "GET",
+    "path": "/get-external-organizations",
+    "summary": "V3 Get External Organizations (Slated for Deprecation)get"
+  },
+  {
+    "method": "GET",
+    "path": "/get-an-external-organization",
+    "summary": "V3 Get an External Organization (Slated for Deprecation)get"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-external-orgs",
+    "summary": "V3 Get External Organizationsget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-create-external-organization",
+    "summary": "V3 Create External Organizationpost"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-external-organization",
+    "summary": "V3 Get External Organizationget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-update-external-organization",
+    "summary": "V3 Update External Organizationpatch"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-manage-dba-records",
+    "summary": "V3 Manage DBA Recordspatch"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-manage-warehouse-details",
+    "summary": "V3 Manage Warehouse Detailspatch"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-manage-external-organization-site-urls",
+    "summary": "V3 Manage External Organization Site URLspatch"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-external-organization-commitments",
+    "summary": "V3 Get External Organization Commitmentspost"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-company-status",
+    "summary": "TPO Settings"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-company-status",
+    "summary": "V3 Get Company Statusget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-company-rating",
+    "summary": "V3 Get Company Ratingget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-company-price-groups",
+    "summary": "V3 Get Company Price Groupsget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-tpo-custom-field-definitions",
+    "summary": "TPO Custom Fields"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-tpo-custom-field-definitions",
+    "summary": "V3 Get TPO Custom Field Definitionsget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-global-tpo-fees",
+    "summary": "TPO Fees"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-global-tpo-fees",
+    "summary": "V3 Get Global TPO Feesget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-global-tpo-fee-details",
+    "summary": "V3 Get Global TPO Fee Detailsget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-global-tpo-late-fees",
+    "summary": "V3 Get Global TPO Late Feesget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-external-banks",
+    "summary": "Warehouse Banks"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-external-banks",
+    "summary": "V3 Get External Banksget"
+  },
+  {
+    "method": "GET",
+    "path": "/settings-external-users",
+    "summary": "Manage External Users"
+  },
+  {
+    "method": "GET",
+    "path": "/get-all-external-users",
+    "summary": "V3 Get All External Usersget"
+  },
+  {
+    "method": "GET",
+    "path": "/manage-external-users",
+    "summary": "V3 Manage External Userspatch"
+  },
+  {
+    "method": "GET",
+    "path": "/get-an-external-user",
+    "summary": "V3 Get an External Userget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-effective-rights-of-external-user",
+    "summary": "V3 Get Effective Rights of External Userget"
+  },
+  {
+    "method": "GET",
+    "path": "/settings-disclosure-tracking",
+    "summary": "Disclosure Tracking"
+  },
+  {
+    "method": "GET",
+    "path": "/get-disclosure-tracking-settings",
+    "summary": "V3 Get Disclosure Tracking Settingsget"
+  },
+  {
+    "method": "GET",
+    "path": "/settings-hmda-profiles",
+    "summary": "HMDA Profiles"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-list-of-hmda-profiles",
+    "summary": "V3 Get List of HMDA Profilesget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-hmda-profile-details",
+    "summary": "V3 Get HMDA Profile Detailsget"
+  },
+  {
+    "method": "GET",
+    "path": "/settings-enhanced-conditions",
+    "summary": "Enhanced Conditions"
+  },
+  {
+    "method": "GET",
+    "path": "/get-all-enhanced-condition-types",
+    "summary": "V3 Get All Enhanced Condition Typesget"
+  },
+  {
+    "method": "GET",
+    "path": "/manage-enhanced-condition-types",
+    "summary": "V3 Manage Enhanced Condition Typespatch"
+  },
+  {
+    "method": "GET",
+    "path": "/get-an-enhanced-condition-type",
+    "summary": "V3 Get an Enhanced Condition Typeget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-all-enhanced-condition-sets",
+    "summary": "V3 Get All Enhanced Condition Setsget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-an-enhanced-condition-set",
+    "summary": "V3 Get an Enhanced Condition Setget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-all-enhanced-condition-templates",
+    "summary": "V3 Get All Enhanced Condition Templatesget"
+  },
+  {
+    "method": "GET",
+    "path": "/manage-enhanced-condition-templates",
+    "summary": "V3 Manage Enhanced Condition Templatespatch"
+  },
+  {
+    "method": "GET",
+    "path": "/get-an-enhanced-condition-template",
+    "summary": "V3 Get an Enhanced Condition Templateget"
+  },
+  {
+    "method": "GET",
+    "path": "/evaluate-automated-conditions",
+    "summary": "V3 Evaluate Automated Conditionspost"
+  },
+  {
+    "method": "GET",
+    "path": "/loan-custom-fields",
+    "summary": "Loan Custom Fields"
+  },
+  {
+    "method": "GET",
+    "path": "/manage-custom-fields",
+    "summary": "V3 Get Loan Custom Field Settingsget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-manage-custom-fields",
+    "summary": "V3 Manage Custom Fieldspatch"
+  },
+  {
+    "method": "GET",
+    "path": "/get-custom-fields",
+    "summary": "V1 Get All Custom Fieldsget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-a-custom-field",
+    "summary": "V1 Get a Custom Fieldget"
+  },
+  {
+    "method": "GET",
+    "path": "/loan-folder",
+    "summary": "Loan Folder"
+  },
+  {
+    "method": "GET",
+    "path": "/get-list-of-loan-folders",
+    "summary": "V3 Get List of Loan Foldersget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-a-loan-folder",
+    "summary": "V3 Get a Loan Folderget"
+  },
+  {
+    "method": "GET",
+    "path": "/settings-loan-print-forms",
+    "summary": "Loan Print Forms"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-list-print-form-groups",
+    "summary": "V3 Get List of Print Form Groupsget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-print-form-group-details",
+    "summary": "V3 Get Print Form Group Detailsget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-list-standard-print-forms",
+    "summary": "V3 Get List of Standard Print Formsget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-encompass-v3-settings-loan-customprintforms",
+    "summary": "V3 Get List of Custom Print Formsget"
+  },
+  {
+    "method": "GET",
+    "path": "/settings-policies",
+    "summary": "Policies"
+  },
+  {
+    "method": "GET",
+    "path": "/referenceget-urla-configuration",
+    "summary": "V3 Get URLA Configurationget"
+  },
+  {
+    "method": "GET",
+    "path": "/settings-loan-templates",
+    "summary": "Overview"
+  },
+  {
+    "method": "GET",
+    "path": "/get-list-of-closing-cost-templates",
+    "summary": "Closing Cost Templates"
+  },
+  {
+    "method": "GET",
+    "path": "/get-list-of-closing-cost-templates",
+    "summary": "V3 Get List of Closing Cost Templatesget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-closing-cost-template-settings",
+    "summary": "V3 Get Closing Cost Template Settingsget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-loan-program-templates",
+    "summary": "Loan Program Templates"
+  },
+  {
+    "method": "GET",
+    "path": "/get-loan-program-templates",
+    "summary": "V3 Get List of Loan Program Templatesget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-loan-program-template-settings",
+    "summary": "V3 Get Loan Program Template Settingsget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-list-of-settlement-service-providers-1",
+    "summary": "Settlement Service Provider Templates"
+  },
+  {
+    "method": "GET",
+    "path": "/get-list-of-settlement-service-providers-1",
+    "summary": "V3 Get List of Settlement Service Provider Template Foldersget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-list-of-settlement-service-providers",
+    "summary": "V3 Get Details of a Settlement Service Provider Template Fileget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-list-of-transcript-of-tax-templates",
+    "summary": "Transcript of Tax Templates"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-list-of-transcript-of-tax-templates",
+    "summary": "V3 Get List of Transcript of Tax Templatesget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-transcript-of-tax-template",
+    "summary": "V3 Get Transcript of Tax Templateget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-list-of-loan-template-sets",
+    "summary": "Loan Template Sets"
+  },
+  {
+    "method": "GET",
+    "path": "/get-list-of-loan-template-sets",
+    "summary": "V3 Get List of Loan Template Setsget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-template-folders",
+    "summary": "V1 Get List of Loan Template Setsget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-template-files",
+    "summary": "V1 Get Loan Template Set Settingsget"
+  },
+  {
+    "method": "GET",
+    "path": "/overview-1",
+    "summary": "Overview"
+  },
+  {
+    "method": "GET",
+    "path": "/create-user",
+    "summary": "Manage SCIM Users"
+  },
+  {
+    "method": "GET",
+    "path": "/create-user",
+    "summary": "Create a Userpost"
+  },
+  {
+    "method": "GET",
+    "path": "/get-users",
+    "summary": "Get Usersget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-user",
+    "summary": "Get Userget"
+  },
+  {
+    "method": "GET",
+    "path": "/update-user",
+    "summary": "Update Userpatch"
+  },
+  {
+    "method": "GET",
+    "path": "/delete-user",
+    "summary": "Delete Userdel"
+  },
+  {
+    "method": "GET",
+    "path": "/get-user-groups",
+    "summary": "Manage SCIM Groups"
+  },
+  {
+    "method": "GET",
+    "path": "/get-user-groups",
+    "summary": "Get User Groupsget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-user-group",
+    "summary": "Get User Groupget"
+  },
+  {
+    "method": "GET",
+    "path": "/update-user-group",
+    "summary": "Update User Grouppatch"
+  },
+  {
+    "method": "GET",
+    "path": "/create-account-link",
+    "summary": "Manage SCIM Account Links"
+  },
+  {
+    "method": "GET",
+    "path": "/create-account-link",
+    "summary": "Create an Account Linkpost"
+  },
+  {
+    "method": "GET",
+    "path": "/get-linked-accounts",
+    "summary": "Get Linked Accountsget"
+  },
+  {
+    "method": "GET",
+    "path": "/delete-account-link",
+    "summary": "Delete an Account Linkdel"
+  },
+  {
+    "method": "GET",
+    "path": "/link-user-to-existing-guid",
+    "summary": "Link User to Existing GUIDpatch"
+  },
+  {
+    "method": "GET",
+    "path": "/settings-secondary-1",
+    "summary": "Secondary Setup"
+  },
+  {
+    "method": "GET",
+    "path": "/get-funding-templates",
+    "summary": "V3 Get Funding Templatesget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-an-investor-template",
+    "summary": "V3 Get an Investor Templateget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-investor-templates",
+    "summary": "V3 Get Investor Templatesget"
+  },
+  {
+    "method": "GET",
+    "path": "/fee-management",
+    "summary": "Fee Management"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-itemization-fee-management",
+    "summary": "V3 Get Itemization Fee Managementget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-loan-originator-compensation-plans",
+    "summary": "V3 Get Loan Originator Compensation Plansget"
+  },
+  {
+    "method": "GET",
+    "path": "/cdo-loan",
+    "summary": "Custom Data Objects"
+  },
+  {
+    "method": "GET",
+    "path": "/v1-contracts-12",
+    "summary": "V1 Contracts"
+  },
+  {
+    "method": "GET",
+    "path": "/get-list-of-loan-cdos",
+    "summary": "V1 Get List of Loan CDOsget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-a-loan-cdo",
+    "summary": "V1 Get a Loan CDOget"
+  },
+  {
+    "method": "GET",
+    "path": "/create-or-replace-a-loan-cdo",
+    "summary": "V1 Create or Replace Loan CDOput"
+  },
+  {
+    "method": "GET",
+    "path": "/delete-a-loan-cdo",
+    "summary": "V1 Delete Loan CDOdel"
+  },
+  {
+    "method": "GET",
+    "path": "/update-a-loan-cdo",
+    "summary": "V1 Update Loan CDOpatch"
+  },
+  {
+    "method": "GET",
+    "path": "/get-user-cdos",
+    "summary": "V1 Get List of User CDOsget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-user-cdo",
+    "summary": "V1 Get a User CDOget"
+  },
+  {
+    "method": "GET",
+    "path": "/create-or-replace-user-cdo",
+    "summary": "V1 Create or Replace User CDOput"
+  },
+  {
+    "method": "GET",
+    "path": "/delete-user-cdo",
+    "summary": "V1 Delete User CDOdel"
+  },
+  {
+    "method": "GET",
+    "path": "/update-user-cdo",
+    "summary": "V1 Update User CDOpatch"
+  },
+  {
+    "method": "GET",
+    "path": "/get-global-cdos",
+    "summary": "V1 Get List of Global CDOsget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-global-cdo",
+    "summary": "V1 Get a Global CDOget"
+  },
+  {
+    "method": "GET",
+    "path": "/create-or-replace-global-cdo",
+    "summary": "V1 Create or Replace Global CDOput"
+  },
+  {
+    "method": "GET",
+    "path": "/delete-global-cdo",
+    "summary": "V1 Delete Global CDOdel"
+  },
+  {
+    "method": "GET",
+    "path": "/update-global-cdo",
+    "summary": "V1 Update Global CDOpatch"
+  },
+  {
+    "method": "GET",
+    "path": "/settings-compliance-reports",
+    "summary": "Settings: Compliance Reports"
+  },
+  {
+    "method": "GET",
+    "path": "/contracts-scr",
+    "summary": "Contracts"
+  },
+  {
+    "method": "GET",
+    "path": "/manage-comp-settings-rpt-permissions",
+    "summary": "Manage Compliance Settings Report Permissionspost"
+  },
+  {
+    "method": "GET",
+    "path": "/users",
+    "summary": "Settings: Internal Users"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-contracts-9",
+    "summary": "V3 Contracts"
+  },
+  {
+    "method": "GET",
+    "path": "/get-eligible-roles",
+    "summary": "V3 Get Eligible Rolesget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-list-internal-users",
+    "summary": "V3 Get a List of Internal Usersget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-create-internal-user",
+    "summary": "V3 Create Internal Userpost"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-update-internal-users",
+    "summary": "V3 Bulk Update Internal Userspatch"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-internal-user-profile",
+    "summary": "V3 Get Internal User Profileget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-delete-internal-user-profile",
+    "summary": "V3 Delete Internal User Profiledel"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-update-internal-user",
+    "summary": "V3 Update Internal Userpatch"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-get-internal-user-public-profile",
+    "summary": "V3 Get Internal User Public Profileget"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-update-internal-user-public-profile",
+    "summary": "V3 Update Internal User Public Profilepatch"
+  },
+  {
+    "method": "GET",
+    "path": "/v3-manage-internal-user-comp-plans",
+    "summary": "V3 Manage Internal User Compensation Plansput"
+  },
+  {
+    "method": "GET",
+    "path": "/v1-contracts-10",
+    "summary": "V1 Contracts"
+  },
+  {
+    "method": "GET",
+    "path": "/get-a-list-of-users",
+    "summary": "V1 Get a List of Usersget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-a-user-profile",
+    "summary": "V1 Get a User Profileget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-list-of-user-groups",
+    "summary": "V1 Get List of User Groupsget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-compensation-plans",
+    "summary": "V1 Get Compensation Plansget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-license-details",
+    "summary": "V1 Get License Detailsget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-users-assigned-rights",
+    "summary": "V1 Get User's Assigned Rightsget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-users-effective-rights",
+    "summary": "V1 Get User's Effective Rightsget"
+  },
+  {
+    "method": "GET",
+    "path": "/transformer",
+    "summary": "Tools: Loan Transformer"
+  },
+  {
+    "method": "GET",
+    "path": "/export-loan-to-mismo-34",
+    "summary": "Export Loan to MISMO 3.4get"
+  },
+  {
+    "method": "GET",
+    "path": "/task-configuration",
+    "summary": "Overview"
+  },
+  {
+    "method": "GET",
+    "path": "/get-all-templates",
+    "summary": "Manage Task Templates"
+  },
+  {
+    "method": "GET",
+    "path": "/get-all-templates",
+    "summary": "Get All Templatesget"
+  },
+  {
+    "method": "GET",
+    "path": "/update-templates",
+    "summary": "Update Task Templatespatch"
+  },
+  {
+    "method": "GET",
+    "path": "/create-a-template",
+    "summary": "Create a Templatepost"
+  },
+  {
+    "method": "GET",
+    "path": "/get-a-template-1",
+    "summary": "Get a Templateget"
+  },
+  {
+    "method": "GET",
+    "path": "/update-a-template",
+    "summary": "Update a Templatepatch"
+  },
+  {
+    "method": "GET",
+    "path": "/delete-a-template",
+    "summary": "Delete a Templatedel"
+  },
+  {
+    "method": "GET",
+    "path": "/get-subtask-templates",
+    "summary": "Manage Subtask Templates"
+  },
+  {
+    "method": "GET",
+    "path": "/get-subtask-templates",
+    "summary": "Get Subtask Templatesget"
+  },
+  {
+    "method": "GET",
+    "path": "/create-a-subtask-template",
+    "summary": "Create a Subtask Templatepost"
+  },
+  {
+    "method": "GET",
+    "path": "/get-a-subtask-template",
+    "summary": "Get a Subtask Templateget"
+  },
+  {
+    "method": "GET",
+    "path": "/update-a-subtask-template",
+    "summary": "Update a Subtask Templatepatch"
+  },
+  {
+    "method": "GET",
+    "path": "/delete-a-subtask-template",
+    "summary": "Delete a Subtask Templatedel"
+  },
+  {
+    "method": "GET",
+    "path": "/get-workflow-v1-settings-task",
+    "summary": "Manage Task Settings"
+  },
+  {
+    "method": "GET",
+    "path": "/get-workflow-v1-settings-task",
+    "summary": "Get Task Settingsget"
+  },
+  {
+    "method": "GET",
+    "path": "/update-task-settings",
+    "summary": "Update Task Settingsput"
+  },
+  {
+    "method": "GET",
+    "path": "/field-search",
+    "summary": "Search for Field or Form"
+  },
+  {
+    "method": "GET",
+    "path": "/search-for-field-form",
+    "summary": "Search for Field or Formpost"
+  },
+  {
+    "method": "GET",
+    "path": "/webhook",
+    "summary": "Overview"
+  },
+  {
+    "method": "GET",
+    "path": "/wbhks-resources-events",
+    "summary": "Resources and Events"
+  },
+  {
+    "method": "GET",
+    "path": "/wbhks-re-cat-loan",
+    "summary": "Loan"
+  },
+  {
+    "method": "GET",
+    "path": "/wbhks-re-cat-doc-delivery",
+    "summary": "Document Delivery"
+  },
+  {
+    "method": "GET",
+    "path": "/wbhks-re-cat-doc-order",
+    "summary": "Document Order"
+  },
+  {
+    "method": "GET",
+    "path": "/wbhks-re-cat-enhanced-conditions",
+    "summary": "Enhanced Conditions"
+  },
+  {
+    "method": "GET",
+    "path": "/wbhks-re-cat-orgs-users",
+    "summary": "Orgs and Users"
+  },
+  {
+    "method": "GET",
+    "path": "/wbhks-re-cat-partner-connect",
+    "summary": "EPC"
+  },
+  {
+    "method": "GET",
+    "path": "/wbhks-re-cat-schedulers",
+    "summary": "Schedulers"
+  },
+  {
+    "method": "GET",
+    "path": "/wbhks-re-cat-trades",
+    "summary": "Trades"
+  },
+  {
+    "method": "GET",
+    "path": "/wbhks-re-cat-workflow-tasks",
+    "summary": "Workflow Tasks"
+  },
+  {
+    "method": "GET",
+    "path": "/wbhks-re-cat-dda",
+    "summary": "DDA"
+  },
+  {
+    "method": "GET",
+    "path": "/wbhks-retry-logic",
+    "summary": "Retry Logic"
+  },
+  {
+    "method": "GET",
+    "path": "/wbhks-access-controls",
+    "summary": "Access Controls"
+  },
+  {
+    "method": "GET",
+    "path": "/custom-authorization",
+    "summary": "Custom Authentication"
+  },
+  {
+    "method": "GET",
+    "path": "/signing-keys",
+    "summary": "Signing Keys"
+  },
+  {
+    "method": "GET",
+    "path": "/webhook-endpoints",
+    "summary": "Endpoint Requirements"
+  },
+  {
+    "method": "GET",
+    "path": "/webhook-event-payload-attributes",
+    "summary": "Webhook Event Payload Attributes"
+  },
+  {
+    "method": "GET",
+    "path": "/default-payload-attributes",
+    "summary": "Default Payload Attributes"
+  },
+  {
+    "method": "GET",
+    "path": "/extra-payload-attributes-doc-delivery",
+    "summary": "Extra Payload Attributes - Document Delivery"
+  },
+  {
+    "method": "GET",
+    "path": "/extra-payload-attributes-documentorder",
+    "summary": "Extra Payload Attributes - DocumentOrder"
+  },
+  {
+    "method": "GET",
+    "path": "/extra-payload-attributes-loan-resources",
+    "summary": "Extra Payload Attributes - Loan Resources"
+  },
+  {
+    "method": "GET",
+    "path": "/extra-payload-attributes-enhancedconditiontemplate",
+    "summary": "Extra Payload Attributes - EnhancedConditionTemplate"
+  },
+  {
+    "method": "GET",
+    "path": "/extra-payload-attributes-enhancedconditiontype",
+    "summary": "Extra Payload Attributes - EnhancedConditionType"
+  },
+  {
+    "method": "GET",
+    "path": "/extra-payload-attributes-externalusers",
+    "summary": "Extra Payload Attributes - ExternalUsers"
+  },
+  {
+    "method": "GET",
+    "path": "/extra-payload-attributes-internalusers",
+    "summary": "Extra Payload Attributes - InternalUsers"
+  },
+  {
+    "method": "GET",
+    "path": "/extra-payload-attributes-serviceorder",
+    "summary": "Extra Payload Attributes - ServiceOrder"
+  },
+  {
+    "method": "GET",
+    "path": "/extra-payload-attributes-subtask",
+    "summary": "Extra Payload Attributes - SubTask"
+  },
+  {
+    "method": "GET",
+    "path": "/extra-payload-attributes-task",
+    "summary": "Extra Payload Attributes - Task"
+  },
+  {
+    "method": "GET",
+    "path": "/extra-payload-attributes-taskcomment",
+    "summary": "Extra Payload Attributes - TaskComment"
+  },
+  {
+    "method": "GET",
+    "path": "/extra-payload-attributes-taskgroup",
+    "summary": "Extra Payload Attributes - TaskGroup"
+  },
+  {
+    "method": "GET",
+    "path": "/extra-payload-attributes-timer",
+    "summary": "Extra Payload Attributes - Timer"
+  },
+  {
+    "method": "GET",
+    "path": "/extra-payload-attributes-trade",
+    "summary": "Extra Payload Attributes - Trade"
+  },
+  {
+    "method": "GET",
+    "path": "/extra-payload-attributes-usergroup",
+    "summary": "Extra Payload Attributes - UserGroup"
+  },
+  {
+    "method": "GET",
+    "path": "/get-all-resources",
+    "summary": "Resources"
+  },
+  {
+    "method": "GET",
+    "path": "/get-all-resources",
+    "summary": "Get All Resourcesget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-a-resource",
+    "summary": "Get a Resourceget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-resource-events",
+    "summary": "Get Resource Eventsget"
+  },
+  {
+    "method": "GET",
+    "path": "/subscriptions",
+    "summary": "Subscriptions"
+  },
+  {
+    "method": "GET",
+    "path": "/get-all-subscriptions",
+    "summary": "Get All Subscriptionsget"
+  },
+  {
+    "method": "GET",
+    "path": "/create-a-subscription",
+    "summary": "Create a Subscriptionpost"
+  },
+  {
+    "method": "GET",
+    "path": "/update-subscription",
+    "summary": "Update Subscriptionput"
+  },
+  {
+    "method": "GET",
+    "path": "/get-a-subscription",
+    "summary": "Get a Subscriptionget"
+  },
+  {
+    "method": "GET",
+    "path": "/delete-subscription",
+    "summary": "Delete Subscriptiondel"
+  },
+  {
+    "method": "GET",
+    "path": "/202-get-all-events",
+    "summary": "Event History"
+  },
+  {
+    "method": "GET",
+    "path": "/202-get-all-events",
+    "summary": "Get All Eventsget"
+  },
+  {
+    "method": "GET",
+    "path": "/get-an-event",
+    "summary": "Get an Eventget"
+  },
+  {
+    "method": "GET",
+    "path": "/overview",
+    "summary": "Overview"
+  },
+  {
+    "method": "GET",
+    "path": "/post_webhook-v1-functions-auth",
+    "summary": "Create Webhook Custom Auth Function"
+  },
+  {
+    "method": "GET",
+    "path": "/post_webhook-v1-functions-auth",
+    "summary": "Create Webhook Custom Auth Functionpost"
+  },
+  {
+    "method": "GET",
+    "path": "/get_webhook-v1-functions-auth",
+    "summary": "Get Webhook Custom Auth Function Listget"
+  },
+  {
+    "method": "GET",
+    "path": "/put_webhook-v1-functions-auth-functionid",
+    "summary": "Manage Webhook Custom Auth"
+  },
+  {
+    "method": "GET",
+    "path": "/put_webhook-v1-functions-auth-functionid",
+    "summary": "Update Webhook Custom Auth Functionput"
+  },
+  {
+    "method": "GET",
+    "path": "/delete_webhook-v1-functions-auth-functionid",
+    "summary": "Delete Webhook Custom Auth Functiondel"
+  },
+  {
+    "method": "GET",
+    "path": "/patch_webhook-v1-functions-auth-functionid",
+    "summary": "Update Webhook Custom Auth Credentialspatch"
+  },
+  {
+    "method": "GET",
+    "path": "/patch_webhook-v1-subscriptions-subscriptionid-functions-auth-functionid",
+    "summary": "Manage Custom Auth Linking to Webhook Subscription"
+  },
+  {
+    "method": "GET",
+    "path": "/patch_webhook-v1-subscriptions-subscriptionid-functions-auth-functionid",
+    "summary": "Link Custom Auth Function to Webhook Subscriptionpatch"
+  },
+  {
+    "method": "GET",
+    "path": "/delete_webhook-v1-subscriptions-subscriptionid-functions-auth-functionid",
+    "summary": "Remove Custom Auth Function from Webhook Subscriptiondel"
+  },
+  {
+    "method": "GET",
+    "path": "/get_webhook-v1-subscriptions-subscriptionid-functions-auth",
+    "summary": "Get Custom Auth Functions for Webhook Subscriptionget"
+  },
+  {
+    "method": "GET",
+    "path": "/post_webhook-v1-functions-auth-functionid-test",
+    "summary": "Test Webhook Custom Auth"
+  },
+  {
+    "method": "GET",
+    "path": "/post_webhook-v1-functions-auth-functionid-test",
+    "summary": "Test Webhook Custom Auth Parameterspost"
+  },
+  {
+    "method": "GET",
+    "path": "/overview-copy",
+    "summary": "Overview"
+  },
+  {
+    "method": "GET",
+    "path": "/get-tasks",
+    "summary": "Manage Tasks"
+  },
+  {
+    "method": "GET",
+    "path": "/get-tasks",
+    "summary": "Get All Tasksget"
+  },
+  {
+    "method": "GET",
+    "path": "/create-a-task",
+    "summary": "Create a Taskpost"
+  },
+  {
+    "method": "GET",
+    "path": "/update-tasks",
+    "summary": "Update All Taskspatch"
+  },
+  {
+    "method": "GET",
+    "path": "/get-a-task",
+    "summary": "Get a Taskget"
+  },
+  {
+    "method": "GET",
+    "path": "/delete-a-task",
+    "summary": "Delete a Taskdel"
+  },
+  {
+    "method": "GET",
+    "path": "/update-a-task",
+    "summary": "Update a Taskpatch"
+  },
+  {
+    "method": "GET",
+    "path": "/tasks-bulk-update",
+    "summary": "Tasks Bulk Updatepatch"
+  },
+  {
+    "method": "GET",
+    "path": "/get-comments-for-a-task",
+    "summary": "Get Comments for a Taskget"
+  },
+  {
+    "method": "GET",
+    "path": "/add-a-comment-to-a-task",
+    "summary": "Add a Comment to a Taskpost"
+  },
+  {
+    "method": "GET",
+    "path": "/get-subtasks",
+    "summary": "Manage Sub-Tasks"
+  },
+  {
+    "method": "GET",
+    "path": "/get-subtasks",
+    "summary": "Get All Subtasksget"
+  },
+  {
+    "method": "GET",
+    "path": "/create-a-subtask",
+    "summary": "Create a Subtaskpost"
+  },
+  {
+    "method": "GET",
+    "path": "/get-a-subtask",
+    "summary": "Get a Subtaskget"
+  },
+  {
+    "method": "GET",
+    "path": "/update-a-task-1",
+    "summary": "Update a Subtaskpatch"
+  },
+  {
+    "method": "GET",
+    "path": "/delete-a-subtask",
+    "summary": "Delete a Subtaskdel"
+  },
+  {
+    "method": "GET",
+    "path": "/get-comments-for-a-subtask",
+    "summary": "Get Comments for a Subtaskget"
+  },
+  {
+    "method": "GET",
+    "path": "/add-a-comment-to-a-subtask",
+    "summary": "Add a Comment to a Subtaskpost"
+  },
+  {
+    "method": "GET",
+    "path": "/get-task-pipeline",
+    "summary": "Task Pipeline"
+  },
+  {
+    "method": "GET",
+    "path": "/get-task-pipeline",
+    "summary": "Get Task Pipelineget"
+  }
+]
