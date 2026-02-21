@@ -19,11 +19,20 @@ async function upsertEndpoint(platformId: number, path: string, method: string, 
 
 async function main() {
     // ════════════════════════════════════════════
+    // DB CLEANUP / MIGRATION FOR ENCOMPASS CRM MERGE
+    // ════════════════════════════════════════════
+    await prisma.platform.deleteMany({ where: { name: "ICE Mortgage Technology" } });
+    await prisma.platform.updateMany({
+        where: { name: "Encompass LOS" },
+        data: { name: "Encompass CRM" }
+    });
+
+    // ════════════════════════════════════════════
     // PLATFORMS
     // ════════════════════════════════════════════
     const encompass = await prisma.platform.upsert({
-        where: { name: "Encompass LOS" },
-        create: { name: "Encompass LOS", baseUrl: "https://api.elliemae.com", authType: "OAuth2" },
+        where: { name: "Encompass CRM" },
+        create: { name: "Encompass CRM", baseUrl: "https://api.elliemae.com", authType: "OAuth2" },
         update: {},
     });
 
@@ -516,15 +525,10 @@ Here is the minimal JSON structure recommended when creating a new lead:
     await upsertEndpoint(docusign.id, "/accounts/{accountId}/templates", "GET", "List Templates",
         "Returns a list of templates available in your DocuSign account.", "Templates");
 
-    
     // ════════════════════════════════════════════
-    // ICE MORTGAGE TECHNOLOGY
+    // ICE MORTGAGE TECHNOLOGY (Merged to Encompass CRM)
     // ════════════════════════════════════════════
-    const icePlatform = await prisma.platform.upsert({
-        where: { name: "ICE Mortgage Technology" },
-        create: { name: "ICE Mortgage Technology", baseUrl: "https://api.icemortgagetechnology.com", authType: "OAuth2" },
-        update: {},
-    });
+    const icePlatform = encompass;
 
     await upsertEndpoint(icePlatform.id, "/v1/api-previews", "GET", "API Previews", "ICE Mortgage Technology API endpoint.", "ICE APIs");
     await upsertEndpoint(icePlatform.id, "/v1/contracts-11", "GET", "Loan Opportunity Settings", "ICE Mortgage Technology API endpoint.", "ICE APIs");
