@@ -3,7 +3,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { Send, Bot, User, Sparkles } from "lucide-react";
+import { ArrowUp, Bot, User, Sparkles } from "lucide-react";
 
 interface Message {
     role: "user" | "assistant";
@@ -78,92 +78,187 @@ export function ChatPane() {
         }
     };
 
+    const handleKeyDown = (e: React.KeyboardEvent) => {
+        if (e.key === "Enter" && !e.shiftKey) {
+            e.preventDefault();
+            handleSubmit(e as any);
+        }
+    };
+
     return (
-        <div className="detail-pane" style={{ display: "flex", flexDirection: "column", height: "100%", padding: 0 }}>
+        <div style={{ display: "flex", flexDirection: "column", height: "100%", position: "relative", background: "var(--bg)" }}>
             {/* Header */}
-            <div style={{ padding: "1.5rem 2rem", borderBottom: "1px solid var(--border)", background: "var(--bg)" }}>
-                <h1 style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontSize: "1.25rem", margin: 0 }}>
-                    <Sparkles size={20} style={{ color: "var(--accent)" }} />
+            <div style={{
+                padding: "1rem 2rem",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                borderBottom: "1px solid var(--border)",
+                background: "var(--bg)",
+                position: "sticky",
+                top: 0,
+                zIndex: 10
+            }}>
+                <h1 style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontSize: "1rem", margin: 0, fontWeight: 600 }}>
+                    <Sparkles size={16} style={{ color: "var(--accent)" }} />
                     HashTurn API Assistant
                 </h1>
-                <p style={{ color: "var(--text-muted)", fontSize: "0.85rem", marginTop: "0.5rem" }}>
-                    Describe what you're trying to achieve, and I'll suggest the best API options available below.
-                </p>
             </div>
 
             {/* Chat History */}
-            <div style={{ flex: 1, overflowY: "auto", padding: "2rem", display: "flex", flexDirection: "column", gap: "1.5rem" }}>
-                {messages.length === 0 && (
-                    <div style={{ textAlign: "center", margin: "auto", color: "var(--text-subtle)", maxWidth: "400px" }}>
-                        <Bot size={40} style={{ opacity: 0.3, marginBottom: "1rem" }} />
-                        <p>Hi! I'm your HashTurn API Assistant.</p>
-                        <p style={{ fontSize: "0.85rem" }}>Try asking: "How do I retrieve a customer in Stripe?" or "Is there an API to send emails with Google Workspace?"</p>
-                    </div>
-                )}
-                {messages.map((message, index) => (
-                    <div key={index} style={{
-                        display: "flex",
-                        gap: "1rem",
-                        flexDirection: message.role === "user" ? "row-reverse" : "row"
-                    }}>
-                        <div style={{
-                            width: "32px", height: "32px", borderRadius: "8px",
-                            background: message.role === "user" ? "var(--accent)" : "var(--bg-tertiary)",
-                            display: "flex", alignItems: "center", justifyContent: "center",
-                            flexShrink: 0
-                        }}>
-                            {message.role === "user" ? <User size={16} color="white" /> : <Sparkles size={16} style={{ color: "var(--text)" }} />}
+            <div style={{ flex: 1, overflowY: "auto", padding: "2rem", display: "flex", flexDirection: "column", alignItems: "center" }}>
+                <div style={{ width: "100%", maxWidth: "768px", display: "flex", flexDirection: "column", gap: "2rem", paddingBottom: "120px" }}>
+                    {messages.length === 0 && (
+                        <div style={{ textAlign: "center", margin: "4rem auto", color: "var(--text-subtle)", animation: "fade-in 0.5s ease" }}>
+                            <div style={{
+                                width: "48px", height: "48px", borderRadius: "12px",
+                                background: "color-mix(in srgb, var(--accent) 15%, transparent)",
+                                color: "var(--accent)",
+                                display: "flex", alignItems: "center", justifyItems: "center", justifyContent: "center",
+                                margin: "0 auto 1.5rem"
+                            }}>
+                                <Sparkles size={24} />
+                            </div>
+                            <h2 style={{ fontSize: "1.25rem", color: "var(--text)", marginBottom: "0.5rem", fontWeight: 500 }}>How can I help you build?</h2>
+                            <p style={{ fontSize: "0.95rem" }}>Ask me about endpoints, parameters, or ways to integrate.</p>
                         </div>
-                        <div style={{
-                            background: message.role === "user" ? "color-mix(in srgb, var(--accent) 15%, transparent)" : "var(--bg-secondary)",
-                            padding: "1rem 1.25rem",
-                            borderRadius: "12px",
-                            border: message.role === "user" ? "none" : "1px solid var(--border)",
-                            maxWidth: "80%",
-                            fontSize: "0.9rem",
-                            lineHeight: 1.6
+                    )}
+
+                    {messages.map((message, index) => (
+                        <div key={index} style={{
+                            display: "flex",
+                            gap: "1.25rem",
+                            width: "100%",
+                            flexDirection: message.role === "user" ? "row-reverse" : "row"
                         }}>
-                            {message.role === "assistant" ? (
-                                <div className="markdown" style={{ margin: 0 }}>
-                                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                                        {message.content || "..."}
-                                    </ReactMarkdown>
-                                </div>
-                            ) : (
-                                <div>{message.content}</div>
-                            )}
+                            <div style={{
+                                width: "32px", height: "32px", borderRadius: "50%",
+                                background: message.role === "user" ? "var(--bg-tertiary)" : "transparent",
+                                display: "flex", alignItems: "center", justifyContent: "center",
+                                flexShrink: 0
+                            }}>
+                                {message.role === "user" ?
+                                    <User size={16} style={{ color: "var(--text-muted)" }} /> :
+                                    <Sparkles size={20} style={{ color: "var(--accent)" }} />
+                                }
+                            </div>
+
+                            <div style={{
+                                background: message.role === "user" ? "var(--bg-tertiary)" : "transparent",
+                                padding: message.role === "user" ? "0.75rem 1.25rem" : "0 0.25rem",
+                                borderRadius: "18px",
+                                borderTopRightRadius: message.role === "user" ? "4px" : "18px",
+                                borderTopLeftRadius: message.role === "assistant" ? "4px" : "18px",
+                                maxWidth: "85%",
+                                fontSize: "0.95rem",
+                                lineHeight: 1.6,
+                                color: "var(--text)",
+                                wordBreak: "break-word"
+                            }}>
+                                {message.role === "assistant" ? (
+                                    <div className="markdown" style={{ margin: 0 }}>
+                                        {message.content === "" ? (
+                                            <span style={{ display: "inline-block", width: "8px", height: "8px", background: "var(--accent)", borderRadius: "50%", animation: "pulse 1.5s infinite" }} />
+                                        ) : (
+                                            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                                                {message.content}
+                                            </ReactMarkdown>
+                                        )}
+                                    </div>
+                                ) : (
+                                    <div style={{ whiteSpace: "pre-wrap" }}>{message.content}</div>
+                                )}
+                            </div>
                         </div>
-                    </div>
-                ))}
-                <div ref={messagesEndRef} />
+                    ))}
+                    <div ref={messagesEndRef} />
+                </div>
             </div>
 
-            {/* Input Form */}
-            <form onSubmit={handleSubmit} style={{
-                padding: "1.5rem",
-                borderTop: "1px solid var(--border)",
-                background: "var(--bg-secondary)",
+            {/* Input Form Floating */}
+            <div style={{
+                position: "absolute",
+                bottom: "2rem",
+                left: "0",
+                right: "0",
                 display: "flex",
-                gap: "1rem"
+                justifyContent: "center",
+                pointerEvents: "none",
+                padding: "0 2rem"
             }}>
-                <input
-                    className="search-input"
-                    value={input}
-                    onChange={(e) => setInput(e.target.value)}
-                    placeholder="E.g., Which API should I use to upload files?"
-                    disabled={isLoading}
-                    style={{ flex: 1, padding: "0.875rem 1rem", fontSize: "0.95rem" }}
-                />
-                <button
-                    type="submit"
-                    className="btn btn-primary"
-                    disabled={isLoading || !input.trim()}
-                    style={{ padding: "0 1.5rem", display: "flex", alignItems: "center", gap: "0.5rem" }}
-                >
-                    <Send size={16} />
-                    {isLoading ? "Thinking..." : "Send"}
-                </button>
-            </form>
+                <form onSubmit={handleSubmit} style={{
+                    position: "relative",
+                    width: "100%",
+                    maxWidth: "768px",
+                    pointerEvents: "auto",
+                    background: "var(--bg)",
+                    border: "1px solid var(--border)",
+                    boxShadow: "0 12px 24px rgba(0,0,0,0.06), 0 4px 8px rgba(0,0,0,0.03)",
+                    borderRadius: "24px",
+                    display: "flex",
+                    alignItems: "flex-end",
+                    padding: "0.5rem 0.75rem",
+                    transition: "box-shadow 0.2s ease"
+                }}>
+                    <textarea
+                        value={input}
+                        onChange={(e) => setInput(e.target.value)}
+                        onKeyDown={handleKeyDown}
+                        placeholder="Message HashTurn API Assistant..."
+                        disabled={isLoading}
+                        rows={1}
+                        style={{
+                            flex: 1,
+                            padding: "0.5rem 0.5rem",
+                            fontSize: "0.95rem",
+                            background: "transparent",
+                            border: "none",
+                            outline: "none",
+                            color: "var(--text)",
+                            resize: "none",
+                            maxHeight: "200px",
+                            fontFamily: "inherit",
+                            lineHeight: "1.5"
+                        }}
+                    />
+                    <button
+                        type="submit"
+                        disabled={isLoading || !input.trim()}
+                        style={{
+                            width: "32px",
+                            height: "32px",
+                            borderRadius: "50%",
+                            background: (input.trim() && !isLoading) ? "var(--text)" : "var(--bg-tertiary)",
+                            color: (input.trim() && !isLoading) ? "var(--bg)" : "var(--text-subtle)",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            border: "none",
+                            cursor: (input.trim() && !isLoading) ? "pointer" : "default",
+                            transition: "all 0.2s ease",
+                            marginBottom: "0.25rem",
+                            flexShrink: 0
+                        }}
+                    >
+                        <ArrowUp size={16} strokeWidth={2.5} />
+                    </button>
+                </form>
+            </div>
+
+            <style dangerouslySetInnerHTML={{
+                __html: `
+                @keyframes pulse {
+                    0% { opacity: 0.4; }
+                    50% { opacity: 1; }
+                    100% { opacity: 0.4; }
+                }
+                @keyframes fade-in {
+                    from { opacity: 0; transform: translateY(5px); }
+                    to { opacity: 1; transform: translateY(0); }
+                }
+                .markdown p:first-child { margin-top: 0; }
+                .markdown p:last-child { margin-bottom: 0; }
+            `}} />
         </div>
     );
 }
