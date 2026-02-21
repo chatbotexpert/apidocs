@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ChevronDown, ChevronRight, Search, Sparkles } from "lucide-react";
 import { MethodBadge } from "@/components/MethodBadge";
 import { ThemeToggle } from "@/components/ThemeToggle";
@@ -23,11 +24,12 @@ interface Platform {
     endpoints?: Endpoint[];
 }
 
-interface NavPaneProps {
-    activeId?: number;
-}
+export function NavPane() {
+    const pathname = usePathname();
+    const activeId = pathname.startsWith("/docs/") && pathname !== "/docs/chat"
+        ? parseInt(pathname.split("/").pop() || "")
+        : undefined;
 
-export function NavPane({ activeId }: NavPaneProps) {
     const [platforms, setPlatforms] = useState<Platform[]>([]);
     const [endpoints, setEndpoints] = useState<Endpoint[]>([]);
     const [collapsed, setCollapsed] = useState<Record<string, boolean>>({});

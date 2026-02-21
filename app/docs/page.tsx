@@ -1,9 +1,6 @@
-import { NavPane } from "@/components/docs/NavPane";
-
 export default function DocsHomePage() {
     return (
-        <div className="docs-layout">
-            <NavPane />
+        <>
             <div className="detail-pane">
                 <div className="empty-state">
                     <div className="empty-icon">📡</div>
@@ -26,6 +23,6 @@ export default function DocsHomePage() {
                     Select an endpoint to generate code snippets
                 </div>
             </div>
-        </div>
+        </>
     );
 }

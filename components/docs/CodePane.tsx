@@ -125,16 +125,16 @@ export function CodePane({ endpoint }: { endpoint: Endpoint }) {
             <div className="code-block" style={{
                 margin: "1rem",
                 borderRadius: "12px",
-                border: "1px solid rgba(255,255,255,0.05)",
-                background: "rgba(0,0,0,0.2)",
-                boxShadow: "inset 0 4px 12px rgba(0,0,0,0.1)",
+                border: "1px solid color-mix(in srgb, var(--border) 40%, transparent)",
+                backgroundColor: "var(--code-overlay)",
+                boxShadow: "inset 0 4px 12px rgba(0,0,0,0.03)",
                 padding: "0.25rem"
             }}>
                 <SyntaxHighlighter
                     language={langMap[lang]}
                     style={dark ? vscDarkPlus : vs}
                     customStyle={{
-                        background: "transparent",
+                        backgroundColor: "transparent",
                         fontSize: "0.82rem",
                         lineHeight: 1.6,
                         margin: 0,
@@ -150,7 +150,7 @@ export function CodePane({ endpoint }: { endpoint: Endpoint }) {
                 margin: "0 1rem 1rem",
                 borderRadius: "12px",
                 border: "1px solid color-mix(in srgb, var(--border) 40%, transparent)",
-                background: "var(--code-overlay)",
+                backgroundColor: "var(--code-overlay)",
                 boxShadow: "inset 0 4px 12px rgba(0,0,0,0.03)"
             }}>
                 <div style={{ padding: "0.75rem 1rem", borderBottom: "1px solid color-mix(in srgb, var(--border) 40%, transparent)", fontSize: "0.7rem", color: "var(--code-tab-text)", textTransform: "uppercase", letterSpacing: "0.07em" }}>
@@ -160,7 +160,7 @@ export function CodePane({ endpoint }: { endpoint: Endpoint }) {
                     language="json"
                     style={dark ? vscDarkPlus : vs}
                     customStyle={{
-                        background: "transparent",
+                        backgroundColor: "transparent",
                         borderBottomLeftRadius: "12px",
                         borderBottomRightRadius: "12px",
                         fontSize: "0.75rem",

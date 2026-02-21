@@ -1,30 +1,24 @@
 const fs = require('fs');
+const cheerio = require('cheerio');
+const html = fs.readFileSync('ice_html.txt', 'utf8');
+const $ = cheerio.load(html);
 
-try {
-    const html = fs.readFileSync('ice_html.txt', 'utf8');
+console.log("Analyzing DOM structure...");
 
-    // Find all links that look like API reference links
-    // Format is usually /developer-connect/reference/{api-name}
-    const regex = /href="(\/developer-connect\/reference\/[^"]+)"/g;
+$('a[href^="/developer-connect/reference/"]').slice(0, 3).each((i, el) => {
+    console.log("Link:", $(el).text().trim().substring(0, 50));
 
-    const links = new Set();
-    let match;
+    let parent = $(el).parent();
+    for (let j = 0; j < 4; j++) {
+        if (!parent.length) break;
+        console.log(`  Parent ${j} <${parent[0].name}> Class:`, parent.attr('class'));
 
-    while ((match = regex.exec(html)) !== null) {
-        // Exclude general pages
-        if (!match[1].includes("browse-apis") && !match[1].includes("getting-started")) {
-            links.add(match[1]);
+        let prev = parent.prev();
+        if (prev.length) {
+            console.log(`    PrevSibling <${prev[0].name}> Class:`, prev.attr('class'));
+            console.log(`    PrevSibling Text:`, prev.text().trim().substring(0, 50));
         }
+        parent = parent.parent();
     }
-
-    const uniqueLinks = Array.from(links).sort();
-
-    console.log(`Found ${uniqueLinks.length} API reference links.`);
-    console.log("First 10 links:");
-    uniqueLinks.slice(0, 10).forEach(link => console.log(link));
-
-    // Save all links for easy access
-    fs.writeFileSync('ice_links.json', JSON.stringify(uniqueLinks, null, 2));
-} catch (e) {
-    console.error(e);
-}
+    console.log("----");
+});

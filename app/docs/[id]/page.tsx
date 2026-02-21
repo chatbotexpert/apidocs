@@ -1,5 +1,4 @@
 import { prisma } from "@/lib/prisma";
-import { NavPane } from "@/components/docs/NavPane";
 import { DetailPane } from "@/components/docs/DetailPane";
 import { CodePane } from "@/components/docs/CodePane";
 import { notFound } from "next/navigation";
@@ -15,6 +14,7 @@ export default async function EndpointPage({ params }: Props) {
         where: { id },
         include: {
             platform: true,
+            guide: true,
             parameters: { include: { guide: true } },
         },
     });
@@ -22,11 +22,10 @@ export default async function EndpointPage({ params }: Props) {
     if (!endpoint) notFound();
 
     return (
-        <div className="docs-layout">
-            <NavPane activeId={id} />
+        <>
             <DetailPane endpoint={endpoint} />
             <CodePane endpoint={endpoint} />
-        </div>
+        </>
     );
 }
 
